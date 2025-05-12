@@ -26,7 +26,7 @@ class TrendingMoviesListViewModel: ObservableObject {
     private var isLoading = false
     
     @MainActor
-        func loadMoreMoviesIfNeeded(currentItem: Movie?) async {
+    func loadMoreMoviesIfNeeded(movies: [Movie], currentItem: Movie?) async {
             guard let currentItem = currentItem else {
                 await fetchTrendingMovies()
                 return

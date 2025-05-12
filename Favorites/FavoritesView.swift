@@ -1,5 +1,5 @@
 //
-//  MoviesListView.swift
+//  FavoritesView.swift
 //  Movies
 //
 //  Created by Aleksandra Axeltra on 12.5.25.
@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct MoviesListView: View {
+struct FavoritesView: View {
     @StateObject private var viewModel = TrendingMoviesListViewModel()
     
     var body: some View {
         NavigationStack {
-            List(viewModel.movies) { movie in
+            List(viewModel.favoriteMovies) { movie in
                 NavigationLink(destination: {
                     
                 }) {
                     MovieItemView(movie: movie)
                         .onAppear {
                             Task {
-                                await viewModel.loadMoreMoviesIfNeeded(movies: viewModel.movies, currentItem: movie)
+                                await viewModel.loadMoreMoviesIfNeeded(movies: viewModel.favoriteMovies, currentItem: movie)
                             }
                         }
                 }
@@ -37,5 +37,5 @@ struct MoviesListView: View {
 }
 
 #Preview {
-    MoviesListView()
+    FavoritesView()
 }
