@@ -16,7 +16,5 @@ enum MoviesAPIEndpoints {
     
     static let searchMovies = "https://api.themoviedb.org/3/search/movie"
     
-    static let searchTVShows = "https://api.themoviedb.org/3/search/tv"
-    
     static let imageServerAddress = "https://image.tmdb.org/t/p/w500/"
 }

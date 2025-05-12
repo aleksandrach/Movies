@@ -25,6 +25,11 @@ struct MoviesApp: App {
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }
+                
+                SearchMoviesView()
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
             }
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

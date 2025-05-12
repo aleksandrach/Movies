@@ -12,14 +12,14 @@ struct MovieDetails: Identifiable, Codable, Favoritable {
     let genres: [Genre]
     let title: String
     let overview: String
-    let posterPath: String
+    let posterPath: String?
     let releaseDate: String
     let voteAverage: Double
     let voteCount: Int
     let runtime: Int
     
     var image: URL? {
-        URL(string: MoviesAPIEndpoints.imageServerAddress + posterPath)
+        URL(string: MoviesAPIEndpoints.imageServerAddress + (posterPath ?? ""))
     }
     
     var releaseYear: String {

@@ -1,5 +1,5 @@
 //
-//  MoviesListView.swift
+//  SearchMoviesView.swift
 //  Movies
 //
 //  Created by Aleksandra Axeltra on 12.5.25.
@@ -7,35 +7,31 @@
 
 import SwiftUI
 
-struct MoviesListView: View {
-    @ObservedObject var viewModel: TrendingMoviesListViewModel
+struct SearchMoviesView: View {
+    @StateObject private var viewModel = SearchViewModel()
     
     var body: some View {
         NavigationStack {
-            List(viewModel.movies) { movie in
+            List(viewModel.searchResults) { movie in
                 NavigationLink(destination: {
                     MovieDetailsView(id: movie.id)
                 }) {
                     MovieItemView(movie: movie)
                         .onAppear {
                             Task {
-                                await viewModel.loadMoreMoviesIfNeeded(movies: viewModel.movies, currentItem: movie)
+                                await viewModel.loadMoreIfNeeded(currentItem: movie)
                             }
                         }
                 }
             }
             .listStyle(.plain)
             .padding(.vertical)
-            .navigationTitle("Trending")
-            .onAppear {
-                Task {
-                    await viewModel.fetchTrendingMovies()
-                }
-            }
+            .navigationTitle("Search")
+            .searchable(text: $viewModel.searchText, prompt: "Search movies...")
         }
     }
 }
 
 #Preview {
-    MoviesListView(viewModel: TrendingMoviesListViewModel())
+    SearchMoviesView()
 }
