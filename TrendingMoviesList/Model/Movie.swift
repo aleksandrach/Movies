@@ -17,4 +17,8 @@ struct Movie: Identifiable, Codable, Hashable {
     let releaseDate: String
     let voteAverage: Double
     let voteCount: Int
+    
+    var image: URL? {
+        URL(string: MoviesAPIEndpoints.imageServerAddress + posterPath)
+    }
 }
