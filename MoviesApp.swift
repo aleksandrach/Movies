@@ -11,15 +11,17 @@ import SwiftUI
 struct MoviesApp: App {
     let persistenceController = PersistenceController.shared
     
+    @StateObject private var viewModel = TrendingMoviesListViewModel()
+    
     var body: some Scene {
         WindowGroup {
             TabView {
-                MoviesListView()
+                MoviesListView(viewModel: viewModel)
                     .tabItem {
                         Label("Trending", systemImage: "chart.line.uptrend.xyaxis")
                     }
                 
-                FavoritesView()
+                FavoritesView(viewModel: viewModel)
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }

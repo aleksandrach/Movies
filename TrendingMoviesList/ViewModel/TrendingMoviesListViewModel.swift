@@ -11,13 +11,10 @@ import SwiftUI
 
 class TrendingMoviesListViewModel: ObservableObject {
     @Published var movies: [Movie] = []
+    @Published var favoriteMovies: [Movie] = []
     @Published var errorMessage: String? = nil
-    
-    @ObservedObject var favorites = Favorites.shared
-    
-    var favoriteMovies: [Movie] {
-        movies.filter { favorites.contains($0) }
-    }
+
+    @ObservedObject var favorites = FavoritesManager.shared
     
     let service = MovieAPIService.shared
     
@@ -27,31 +24,35 @@ class TrendingMoviesListViewModel: ObservableObject {
     
     @MainActor
     func loadMoreMoviesIfNeeded(movies: [Movie], currentItem: Movie?) async {
-            guard let currentItem = currentItem else {
-                await fetchTrendingMovies()
-                return
-            }
-
-            let thresholdIndex = movies.index(movies.endIndex, offsetBy: -5)
-            if movies.firstIndex(where: { $0.id == currentItem.id }) == thresholdIndex {
-                await fetchTrendingMovies()
-            }
+        guard let currentItem = currentItem else {
+            await fetchTrendingMovies()
+            return
         }
+        
+        let thresholdIndex = movies.index(movies.endIndex, offsetBy: -5)
+        if movies.firstIndex(where: { $0.id == currentItem.id }) == thresholdIndex {
+            await fetchTrendingMovies()
+        }
+    }
     
     @MainActor
-        func fetchTrendingMovies() async {
-            guard !isLoading, currentPage <= totalPages else { return }
-            isLoading = true
-            
-            do {
-                let response = try await service.fetchTrendingMovies(page: currentPage)
-                movies.append(contentsOf: response.results)
-                totalPages = response.totalPages
-                currentPage += 1
-            } catch {
-                errorMessage = error.localizedDescription
-            }
-
-            isLoading = false
+    func fetchTrendingMovies() async {
+        guard !isLoading, currentPage <= totalPages else { return }
+        isLoading = true
+        
+        do {
+            let response = try await service.fetchTrendingMovies(page: currentPage)
+            movies.append(contentsOf: response.results)
+            totalPages = response.totalPages
+            currentPage += 1
+        } catch {
+            errorMessage = error.localizedDescription
         }
+        
+        isLoading = false
+    }
+    
+    func loadFavorites() {
+        self.favoriteMovies = movies.filter { favorites.contains($0) }
+    }
 }
