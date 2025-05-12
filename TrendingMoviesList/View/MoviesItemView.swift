@@ -28,6 +28,7 @@ struct MovieItemView: View {
                 }
                 
                 Text(movie.overview)
+                    .foregroundStyle(.gray)
                     .lineLimit(3)
             }
         }
