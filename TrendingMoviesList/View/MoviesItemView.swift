@@ -38,11 +38,7 @@ struct MovieItemView: View {
 #Preview {
     MovieItemView(movie: Movie(id: 1151039,
                                title: "Nonnas",
-                               originalTitle: "Nonnas",
                                overview: "After losing his beloved mother, a man risks everything to honor her by opening an Italian restaurant with actual nonnas — grandmothers — as the chefs.",
                                posterPath: "/lZEOKj5wtgUGpaQkzJRl7cjEv21.jpg",
-                               popularity: 52.8025,
-                               releaseDate: "2025-05-01",
-                               voteAverage: 6.308,
-                               voteCount: 13))
+                               releaseDate: ""))
 }
