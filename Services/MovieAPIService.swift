@@ -9,9 +9,12 @@ import Foundation
 
 protocol MovieServiceProtocol {
     func fetchTrendingMovies(page: Int) async throws -> TrendingMoviesResponse
+    
+    func getMovieDetails(movieId: Int) async throws -> MovieDetails
 }
 
 class MovieAPIService: MovieServiceProtocol {
+    
     static let shared = MovieAPIService()
     
     func fetchTrendingMovies(page: Int) async throws -> TrendingMoviesResponse {
@@ -30,7 +33,7 @@ class MovieAPIService: MovieServiceProtocol {
         
         var request = URLRequest(url: components.url!)
         request.httpMethod = "GET"
-        request.timeoutInterval = 60
+        request.timeoutInterval = 10
         request.allHTTPHeaderFields = [
             "accept": "application/json",
             "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDBjZGY0ZjE1ZWJlZTA3MjA1NTNmN2NkN2YyMmRhZiIsIm5iZiI6MTc0NjgxNjU1NC4xMjksInN1YiI6IjY4MWU0ZTJhMGY3MzM5MDQwNjljMmJiNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UaZpGO0iTbk5_pdg8DPm_hZac9ddPiMMpP1EpKrso9k"
@@ -54,6 +57,53 @@ class MovieAPIService: MovieServiceProtocol {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             
             let decoded = try decoder.decode(TrendingMoviesResponse.self, from: data)
+            return decoded
+        } catch {
+            // Print out the error if the data fetching fails
+            print("Error fetching data: \(error.localizedDescription)")
+            throw NetworkingError.invalidData
+        }
+    }
+    
+    func getMovieDetails(movieId: Int) async throws -> MovieDetails {
+        let endpoint = MoviesAPIEndpoints.movieDetails + "\(movieId)"
+        
+        guard let url = URL(string: endpoint) else {
+            throw NetworkingError.invalidURL
+        }
+        
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
+        let queryItems: [URLQueryItem] = [
+            URLQueryItem(name: "language", value: "en-US")
+        ]
+        components.queryItems = (components.queryItems ?? []) + queryItems
+        
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = "GET"
+        request.timeoutInterval = 10
+        request.allHTTPHeaderFields = [
+            "accept": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDBjZGY0ZjE1ZWJlZTA3MjA1NTNmN2NkN2YyMmRhZiIsIm5iZiI6MTc0NjgxNjU1NC4xMjksInN1YiI6IjY4MWU0ZTJhMGY3MzM5MDQwNjljMmJiNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UaZpGO0iTbk5_pdg8DPm_hZac9ddPiMMpP1EpKrso9k"
+        ]
+        
+        do {
+            let config = URLSessionConfiguration.default
+            //config.protocolClasses = [LoggingURLProtocol.self] // Custom logging protocol class
+            //let networkLogger = NetworkLogger()
+
+            let session = URLSession(configuration: .default)
+
+            let (data, response) = try await session.data(for: request)
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                throw NetworkingError.invalidResponse
+            }
+            
+            // Proceed with decoding only if status code is 200
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
+            let decoded = try decoder.decode(MovieDetails.self, from: data)
             return decoded
         } catch {
             // Print out the error if the data fetching fails

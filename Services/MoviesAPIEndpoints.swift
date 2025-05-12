@@ -12,6 +12,8 @@ enum MoviesAPIEndpoints {
     
     static let trendingMovies = "https://api.themoviedb.org/3/trending/movie/week"
     
+    static let movieDetails = "https://api.themoviedb.org/3/movie/"
+    
     static let searchMovies = "https://api.themoviedb.org/3/search/movie"
     
     static let searchTVShows = "https://api.themoviedb.org/3/search/tv"
