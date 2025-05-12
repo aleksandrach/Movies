@@ -28,12 +28,16 @@ struct MovieItemView: View {
                     
                     Spacer()
                     
-                    if favorites.contains(movie) {
-                        Image(systemName: "heart.fill")
-                            .foregroundStyle(.red)
-                    } else {
-                        Image(systemName: "heart")
-                            .foregroundStyle(.red)
+                    Button {
+                        favorites.toggleFavorite(movie)
+                    } label: {
+                        if favorites.contains(movie) {
+                            Image(systemName: "star.fill")
+                                .foregroundStyle(.yellow)
+                        } else {
+                            Image(systemName: "star")
+                                .foregroundStyle(.yellow)
+                        }
                     }
                 }
                 
