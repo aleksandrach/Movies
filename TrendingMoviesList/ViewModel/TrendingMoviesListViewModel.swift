@@ -6,10 +6,18 @@
 //
 
 import Foundation
+import Combine
+import SwiftUI
 
 class TrendingMoviesListViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     @Published var errorMessage: String? = nil
+    
+    @ObservedObject var favorites = Favorites.shared
+    
+    var favoriteMovies: [Movie] {
+        movies.filter { favorites.contains($0) }
+    }
     
     let service = MovieAPIService.shared
     
