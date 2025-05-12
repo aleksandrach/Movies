@@ -10,11 +10,21 @@ import SwiftUI
 @main
 struct MoviesApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
-            MoviesListView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            TabView {
+                MoviesListView()
+                    .tabItem {
+                        Label("Trending", systemImage: "chart.line.uptrend.xyaxis")
+                    }
+                
+                FavoritesView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
+                    }
+            }
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
