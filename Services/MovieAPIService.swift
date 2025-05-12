@@ -40,7 +40,7 @@ class MovieAPIService: MovieServiceProtocol {
         ]
         
         do {
-            let config = URLSessionConfiguration.default
+            //let config = URLSessionConfiguration.default
             //config.protocolClasses = [LoggingURLProtocol.self] // Custom logging protocol class
             //let networkLogger = NetworkLogger()
 
@@ -87,7 +87,7 @@ class MovieAPIService: MovieServiceProtocol {
         ]
         
         do {
-            let config = URLSessionConfiguration.default
+            //let config = URLSessionConfiguration.default
             //config.protocolClasses = [LoggingURLProtocol.self] // Custom logging protocol class
             //let networkLogger = NetworkLogger()
 

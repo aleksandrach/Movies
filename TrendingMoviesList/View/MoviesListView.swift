@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct MoviesListView: View {
-    @StateObject private var viewModel = TrendingMoviesListViewModel()
+    @ObservedObject var viewModel: TrendingMoviesListViewModel
     
     var body: some View {
         NavigationStack {
             List(viewModel.movies) { movie in
                 NavigationLink(destination: {
-                    
+                    MovieDetailsView(id: movie.id)
                 }) {
                     MovieItemView(movie: movie)
                         .onAppear {
@@ -37,5 +37,5 @@ struct MoviesListView: View {
 }
 
 #Preview {
-    MoviesListView()
+    MoviesListView(viewModel: TrendingMoviesListViewModel())
 }

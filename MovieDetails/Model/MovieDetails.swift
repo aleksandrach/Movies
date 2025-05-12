@@ -7,18 +7,22 @@
 
 import Foundation
 
-struct MovieDetails: Identifiable, Codable {
+struct MovieDetails: Identifiable, Codable, Favoritable {
     let id: Int
     let genres: [Genre]
-    let originalTitle: String
+    let title: String
     let overview: String
     let posterPath: String
-    let releaseDate: String?
+    let releaseDate: String
     let voteAverage: Double
     let voteCount: Int
     
     var image: URL? {
         URL(string: MoviesAPIEndpoints.imageServerAddress + posterPath)
+    }
+    
+    var releaseYear: String {
+        DateFormatter.yearString(from: releaseDate) ?? "N/A"
     }
 }
 
