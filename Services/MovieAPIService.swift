@@ -8,13 +8,13 @@
 import Foundation
 
 protocol MovieServiceProtocol {
-    func fetchTrendingMovies() async throws -> [Movie]
+    func fetchTrendingMovies(page: Int) async throws -> TrendingMoviesResponse
 }
 
 class MovieAPIService: MovieServiceProtocol {
     static let shared = MovieAPIService()
     
-    func fetchTrendingMovies() async throws -> [Movie] {
+    func fetchTrendingMovies(page: Int) async throws -> TrendingMoviesResponse {
         let endpoint = MoviesAPIEndpoints.trendingMovies
         
         guard let url = URL(string: endpoint) else {
@@ -24,6 +24,7 @@ class MovieAPIService: MovieServiceProtocol {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         let queryItems: [URLQueryItem] = [
             URLQueryItem(name: "language", value: "en-US"),
+            URLQueryItem(name: "page", value: "\(page)")
         ]
         components.queryItems = (components.queryItems ?? []) + queryItems
         
@@ -53,7 +54,7 @@ class MovieAPIService: MovieServiceProtocol {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             
             let decoded = try decoder.decode(TrendingMoviesResponse.self, from: data)
-            return decoded.results
+            return decoded
         } catch {
             // Print out the error if the data fetching fails
             print("Error fetching data: \(error.localizedDescription)")

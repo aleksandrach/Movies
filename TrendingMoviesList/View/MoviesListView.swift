@@ -17,6 +17,11 @@ struct MoviesListView: View {
                     
                 }) {
                     MovieItemView(movie: movie)
+                        .onAppear {
+                            Task {
+                                await viewModel.loadMoreMoviesIfNeeded(currentItem: movie)
+                            }
+                        }
                 }
             }
             .listStyle(.plain)
