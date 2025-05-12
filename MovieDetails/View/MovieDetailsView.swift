@@ -18,30 +18,34 @@ struct MovieDetailsView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack {
+                VStack(spacing: 8) {
+                    HStack {
+                        Text(viewModel.movieDetails?.releaseYear ?? "")
+                        
+                        Text("\(viewModel.movieDetails?.formattedRuntime ?? "")")
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    
                     KFImage(viewModel.movieDetails?.image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(height: 250)
                         .clipped()
                     
-                    HStack {
-                        VStack {
-                            Text(String(format: "%.1f", viewModel.movieDetails?.voteAverage ?? "N/A") + "/10")
-                                .font(.headline)
-                            
-                            Text("\(String(describing: viewModel.movieDetails?.voteCount))")
-                                .font(.caption)
-                        }
-                        
-                        Spacer()
-                        
-                        Text(viewModel.movieDetails?.releaseYear ?? "N/A")
+                    if let movieDetails = viewModel.movieDetails {
+                        GenreTagsView(genres: movieDetails.genres)
                     }
-                    .padding(.horizontal)
                     
-                    Text(viewModel.movieDetails?.overview ?? "N/A")
-                        .padding(4)
+                    HStack {
+                        if let movieDetails = viewModel.movieDetails {
+                            RatingView(movieDetails: movieDetails)
+                            
+                            Text(viewModel.movieDetails?.overview ?? "N/A")
+                                .padding(4)
+                        }
+                    }
                 }
             }
             .navigationTitle(viewModel.movieDetails?.title ?? "")
@@ -66,6 +70,46 @@ struct MovieDetailsView: View {
                 }
             }
         }
+    }
+}
+
+struct GenreTagsView: View {
+    let genres: [Genre]
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(genres) { genre in
+                    Text(genre.name)
+                        .font(.caption)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 4)
+                        .background(Color.gray.opacity(0.2))
+                        .foregroundColor(.white)
+                        .clipShape(Rectangle())
+                }
+            }
+        }
+    }
+}
+
+struct RatingView: View {
+    let movieDetails: MovieDetails
+    
+    var body: some View {
+        HStack {
+            VStack {
+                Image(systemName: "star.fill")
+                    .foregroundStyle(.yellow)
+                
+                Text(String(format: "%.1f", movieDetails.voteAverage) + "/10")
+                    .font(.headline)
+                
+                Text("\(String(describing: movieDetails.voteCount))")
+                    .font(.caption)
+            }
+        }
+        .padding(.horizontal)
     }
 }
 

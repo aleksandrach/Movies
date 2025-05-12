@@ -16,6 +16,7 @@ struct MovieDetails: Identifiable, Codable, Favoritable {
     let releaseDate: String
     let voteAverage: Double
     let voteCount: Int
+    let runtime: Int
     
     var image: URL? {
         URL(string: MoviesAPIEndpoints.imageServerAddress + posterPath)
@@ -23,6 +24,12 @@ struct MovieDetails: Identifiable, Codable, Favoritable {
     
     var releaseYear: String {
         DateFormatter.yearString(from: releaseDate) ?? "N/A"
+    }
+    
+    var formattedRuntime: String {
+        let hours = runtime / 60
+        let minutes = runtime % 60
+        return "\(hours)h \(minutes)m"
     }
 }
 
