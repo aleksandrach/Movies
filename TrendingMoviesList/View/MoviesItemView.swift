@@ -9,6 +9,8 @@ import SwiftUI
 import Kingfisher
 
 struct MovieItemView: View {
+    @ObservedObject var favorites = Favorites.shared
+    
     var movie: Movie
     
     var body: some View {
@@ -25,6 +27,14 @@ struct MovieItemView: View {
                         .font(.headline)
                     
                     Spacer()
+                    
+                    if favorites.contains(movie) {
+                        Image(systemName: "heart.fill")
+                            .foregroundStyle(.red)
+                    } else {
+                        Image(systemName: "heart")
+                            .foregroundStyle(.red)
+                    }
                 }
                 
                 Text(movie.overview)
