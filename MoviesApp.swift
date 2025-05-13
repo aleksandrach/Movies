@@ -21,7 +21,7 @@ struct MoviesApp: App {
                         Label("Trending", systemImage: "chart.line.uptrend.xyaxis")
                     }
                 
-                FavoritesView(viewModel: viewModel)
+                FavoritesView()
                     .tabItem {
                         Label("Favorites", systemImage: "star")
                     }

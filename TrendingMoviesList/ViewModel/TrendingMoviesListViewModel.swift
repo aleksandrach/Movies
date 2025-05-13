@@ -11,10 +11,7 @@ import SwiftUI
 
 class TrendingMoviesListViewModel: ObservableObject {
     @Published var movies: [Movie] = []
-    @Published var favoriteMovies: [Movie] = []
     @Published var errorMessage: String? = nil
-
-    @ObservedObject var favorites = FavoritesManager.shared
     
     let service = MovieAPIService.shared
     
@@ -23,7 +20,7 @@ class TrendingMoviesListViewModel: ObservableObject {
     private var isLoading = false
     
     @MainActor
-    func loadMoreMoviesIfNeeded(movies: [Movie], currentItem: Movie?) async {
+    func loadMoreMoviesIfNeeded(currentItem: Movie?) async {
         guard let currentItem = currentItem else {
             await fetchTrendingMovies()
             return
@@ -50,9 +47,5 @@ class TrendingMoviesListViewModel: ObservableObject {
         }
         
         isLoading = false
-    }
-    
-    func loadFavorites() {
-        self.favoriteMovies = movies.filter { favorites.contains($0) }
     }
 }

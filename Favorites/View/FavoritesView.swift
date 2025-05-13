@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @ObservedObject var viewModel: TrendingMoviesListViewModel
+    @StateObject private var viewModel = FavoritesViewModel()
     
     var body: some View {
         NavigationStack {
@@ -17,23 +17,15 @@ struct FavoritesView: View {
                     MovieDetailsView(id: movie.id)
                 }) {
                     MovieItemView(movie: movie)
-                        .onAppear {
-                            Task {
-                                await viewModel.loadMoreMoviesIfNeeded(movies: viewModel.favoriteMovies, currentItem: movie)
-                            }
-                        }
                 }
             }
             .listStyle(.plain)
             .padding(.vertical)
             .navigationTitle("Favorites")
-            .onAppear {
-                viewModel.loadFavorites()
-            }
         }
     }
 }
 
 #Preview {
-    FavoritesView(viewModel: TrendingMoviesListViewModel())
+    FavoritesView()
 }

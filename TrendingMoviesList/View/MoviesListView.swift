@@ -19,7 +19,7 @@ struct MoviesListView: View {
                     MovieItemView(movie: movie)
                         .onAppear {
                             Task {
-                                await viewModel.loadMoreMoviesIfNeeded(movies: viewModel.movies, currentItem: movie)
+                                await viewModel.loadMoreMoviesIfNeeded(currentItem: movie)
                             }
                         }
                 }
