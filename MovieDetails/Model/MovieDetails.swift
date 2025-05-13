@@ -19,7 +19,7 @@ struct MovieDetails: Identifiable, Codable, Favoritable {
     let runtime: Int
     
     var image: URL? {
-        URL(string: MoviesAPIEndpoints.imageServerAddress + (posterPath ?? ""))
+        URL(string: MoviesAPIEndpoints.imageURL + (posterPath ?? ""))
     }
     
     var releaseYear: String {
