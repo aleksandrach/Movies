@@ -14,7 +14,7 @@ class SearchViewModel: ObservableObject {
     @Published var isSearching = false
     @Published var searchText: String = ""
     @Published var searchResults: [Movie] = []
-    @Published var errorMessage: String? = nil
+    @Published var errorMessage: String?
     
     private var currentPage = 1
     private var totalPages = 1

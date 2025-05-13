@@ -42,10 +42,6 @@ class MovieAPIService: MovieServiceProtocol {
         ]
         
         do {
-            //let config = URLSessionConfiguration.default
-            //config.protocolClasses = [LoggingURLProtocol.self] // Custom logging protocol class
-            //let networkLogger = NetworkLogger()
-
             let session = URLSession(configuration: .default)
 
             let (data, response) = try await session.data(for: request)
@@ -89,10 +85,6 @@ class MovieAPIService: MovieServiceProtocol {
         ]
         
         do {
-            //let config = URLSessionConfiguration.default
-            //config.protocolClasses = [LoggingURLProtocol.self] // Custom logging protocol class
-            //let networkLogger = NetworkLogger()
-
             let session = URLSession(configuration: .default)
 
             let (data, response) = try await session.data(for: request)
@@ -138,10 +130,6 @@ class MovieAPIService: MovieServiceProtocol {
         ]
         
         do {
-            //let config = URLSessionConfiguration.default
-            //config.protocolClasses = [LoggingURLProtocol.self] // Custom logging protocol class
-            //let networkLogger = NetworkLogger()
-
             let session = URLSession(configuration: .default)
 
             let (data, response) = try await session.data(for: request)
@@ -163,46 +151,6 @@ class MovieAPIService: MovieServiceProtocol {
         }
     }
 }
-
-//class LoggingURLProtocol: URLProtocol {
-//    override class func canInit(with request: URLRequest) -> Bool {
-//        return true
-//    }
-//
-//    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
-//        return request
-//    }
-//
-//    override func startLoading() {
-//        print("Request: \(self.request)")
-//        if let response = self.client as? HTTPURLResponse {
-//            print("Response: \(response.statusCode)")
-//        }
-//        self.client?.urlProtocol(self, didLoad: Data()) // Send dummy response for now
-//    }
-//
-//    override func stopLoading() {
-//        // Handle stopping of loading
-//    }
-//}
-//
-//class NetworkLogger: NSObject, URLSessionDelegate {
-//    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-//        completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
-//    }
-//    
-//    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
-//        if let httpResponse = response as? HTTPURLResponse {
-//            print("Received response with status code: \(httpResponse.statusCode)")
-//        }
-//        completionHandler(.allow)
-//    }
-//    
-//    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data, completionHandler: @escaping () -> Void) {
-//        print("Received data: \(data.count) bytes")
-//        completionHandler()
-//    }
-//}
 
 enum NetworkingError: Error {
     case invalidURL

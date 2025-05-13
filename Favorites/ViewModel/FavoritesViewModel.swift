@@ -12,7 +12,7 @@ import SwiftUI
 @MainActor
 class FavoritesViewModel: ObservableObject {
     @Published var favoriteMovies: [Movie] = []
-    
+
     @ObservedObject var favorites = FavoritesManager.shared
     
     private var cancellables = Set<AnyCancellable>()
@@ -21,4 +21,3 @@ class FavoritesViewModel: ObservableObject {
 //        self.favoriteMovies = movies.filter { favorites.contains($0) }
 //    }
 }
-

@@ -13,11 +13,14 @@ struct FavoritesView: View {
     var body: some View {
         NavigationStack {
             List(viewModel.favoriteMovies) { movie in
-                NavigationLink(destination: {
-                    MovieDetailsView(id: movie.id)
-                }) {
-                    MovieItemView(movie: movie)
-                }
+                NavigationLink(
+                    destination: {
+                        MovieDetailsView(id: movie.id)
+                    },
+                    label: {
+                        MovieItemView(movie: movie)
+                    }
+                )
             }
             .listStyle(.plain)
             .padding(.vertical)

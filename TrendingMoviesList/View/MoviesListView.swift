@@ -13,16 +13,19 @@ struct MoviesListView: View {
     var body: some View {
         NavigationStack {
             List(viewModel.movies) { movie in
-                NavigationLink(destination: {
-                    MovieDetailsView(id: movie.id)
-                }) {
-                    MovieItemView(movie: movie)
-                        .onAppear {
-                            Task {
-                                await viewModel.loadMoreMoviesIfNeeded(currentItem: movie)
+                NavigationLink(
+                    destination: {
+                        MovieDetailsView(id: movie.id)
+                    },
+                    label: {
+                        MovieItemView(movie: movie)
+                            .onAppear {
+                                Task {
+                                    await viewModel.loadMoreMoviesIfNeeded(currentItem: movie)
+                                }
                             }
-                        }
-                }
+                    }
+                )
             }
             .listStyle(.plain)
             .padding(.vertical)

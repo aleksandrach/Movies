@@ -11,7 +11,7 @@ import SwiftUI
 
 class TrendingMoviesListViewModel: ObservableObject {
     @Published var movies: [Movie] = []
-    @Published var errorMessage: String? = nil
+    @Published var errorMessage: String?
     
     let service = MovieAPIService.shared
     

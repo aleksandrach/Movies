@@ -112,4 +112,3 @@ struct RatingView: View {
         .padding(.horizontal)
     }
 }
-

@@ -9,7 +9,7 @@ import Foundation
 
 class MovieDetailsViewModel: ObservableObject {
     @Published var movieDetails: MovieDetails?
-    @Published var errorMessage: String? = nil
+    @Published var errorMessage: String?
     
     let service = MovieAPIService.shared
     
