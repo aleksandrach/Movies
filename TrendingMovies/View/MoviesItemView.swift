@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct MovieItemView: View {
-    @ObservedObject var favorites = FavoritesManager.shared
+    @EnvironmentObject var favoritesManager: FavoritesManager<Movie>
     
     var movie: Movie
     
@@ -29,9 +29,9 @@ struct MovieItemView: View {
                     Spacer()
                     
                     Button {
-                        favorites.toggle(movie)
+                        favoritesManager.toggleFavorite(movie)
                     } label: {
-                        if favorites.contains(movie) {
+                        if favoritesManager.contains(movie) {
                             Image(systemName: "star.fill")
                                 .foregroundStyle(.yellow)
                         } else {

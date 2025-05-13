@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieDetails: Identifiable, Codable, Favoritable {
+struct MovieDetails: Identifiable, Codable, Favoritable, Equatable {
     let id: Int
     let genres: [Genre]
     let title: String
@@ -33,7 +33,19 @@ struct MovieDetails: Identifiable, Codable, Favoritable {
     }
 }
 
-struct Genre: Identifiable, Codable {
+extension MovieDetails {
+    var asMovie: Movie {
+        Movie(
+            id: self.id,
+            title: self.title,
+            overview: self.overview,
+            posterPath: self.posterPath,
+            releaseDate: self.releaseDate
+        )
+    }
+}
+
+struct Genre: Identifiable, Codable, Equatable {
     let id: Int
     let name: String
 }

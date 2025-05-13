@@ -8,24 +8,13 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @StateObject private var viewModel = FavoritesViewModel()
+    @EnvironmentObject var favoritesManager: FavoritesManager<Movie>
     
     var body: some View {
-        NavigationStack {
-            List(viewModel.favoriteMovies) { movie in
-                NavigationLink(
-                    destination: {
-                        MovieDetailsView(id: movie.id)
-                    },
-                    label: {
-                        MovieItemView(movie: movie)
-                    }
-                )
-            }
-            .listStyle(.plain)
-            .padding(.vertical)
-            .navigationTitle("Favorites")
-        }
+        MoviesListView(movies: favoritesManager.favorites,
+                       title: "Favorites",
+                       onItemAppear: nil,
+                       onAppear: nil)
     }
 }
 

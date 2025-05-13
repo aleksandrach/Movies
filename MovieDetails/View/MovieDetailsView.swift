@@ -10,8 +10,7 @@ import Kingfisher
 
 struct MovieDetailsView: View {
     @StateObject private var viewModel = MovieDetailsViewModel()
-    
-    @ObservedObject var favorites = FavoritesManager.shared
+    @EnvironmentObject var favoritesManager: FavoritesManager<Movie>
     
     var id: Int
     
@@ -52,9 +51,9 @@ struct MovieDetailsView: View {
             .toolbar {
                 if let movieDetails = viewModel.movieDetails {
                     Button {
-                        favorites.toggle(movieDetails)
+                        favoritesManager.toggleFavorite(movieDetails.asMovie)
                     } label: {
-                        if favorites.contains(movieDetails) {
+                        if favoritesManager.contains(movieDetails.asMovie) {
                             Image(systemName: "star.fill")
                                 .foregroundStyle(.yellow)
                         } else {

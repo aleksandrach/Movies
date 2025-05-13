@@ -7,54 +7,55 @@
 
 import SwiftUI
 
-protocol Favoritable: Identifiable {
+protocol Favoritable: Identifiable, Codable, Equatable {
     var id: Int { get }
 }
 
-class FavoritesManager: ObservableObject {
-    // the actual movies the user has favorited
-    private var favoriteIDs: Set<String>
-    
-    // the key we're using to read/write in UserDefaults
-    private let key = "Favorites"
-    
-    static let shared = FavoritesManager()
-    
-    init() {
-        // load our saved data
-        if let saved = UserDefaults.standard.array(forKey: key) as? [String] {
-            self.favoriteIDs = Set(saved)
+import Foundation
+import Combine
+
+final class FavoritesManager<T: Favoritable>: ObservableObject {
+    @Published private(set) var favorites: [T] = []
+
+    private let key: String
+
+    init(key: String) {
+        self.key = key
+        loadFavorites()
+    }
+
+    func toggleFavorite(_ item: T) {
+        if let index = favorites.firstIndex(of: item) {
+            favorites.remove(at: index)
         } else {
-            self.favoriteIDs = []
+            favorites.append(item)
+        }
+        saveFavorites()
+    }
+
+    func contains(_ item: T) -> Bool {
+        favorites.contains(item)
+    }
+
+    func getFavorites() -> [T] {
+        return favorites
+    }
+
+    private func saveFavorites() {
+        do {
+            let data = try JSONEncoder().encode(favorites)
+            UserDefaults.standard.set(data, forKey: key)
+        } catch {
+            print("Failed to save favorites: \(error)")
         }
     }
 
-    // returns true if our set contains this movie
-    func contains<T: Favoritable>(_ item: T) -> Bool {
-        favoriteIDs.contains(String(item.id))
-    }
-    
-    func toggle<T: Favoritable>(_ item: T) {
-        if contains(item) {
-            remove(item)
-        } else {
-            add(item)
+    private func loadFavorites() {
+        guard let data = UserDefaults.standard.data(forKey: key) else { return }
+        do {
+            favorites = try JSONDecoder().decode([T].self, from: data)
+        } catch {
+            print("Failed to load favorites: \(error)")
         }
-    }
-    
-    // adds the movie to our set and saves the change
-    func add<T: Favoritable>(_ item: T) {
-        favoriteIDs.insert(String(item.id))
-        
-        UserDefaults.standard.set(Array(favoriteIDs), forKey: key)
-        objectWillChange.send()
-    }
-    
-    // removes the movie from our set and saves the change
-    func remove<T: Favoritable>(_ item: T) {
-        favoriteIDs.remove(String(item.id))
-        
-        UserDefaults.standard.set(Array(favoriteIDs), forKey: key)
-        objectWillChange.send()
     }
 }

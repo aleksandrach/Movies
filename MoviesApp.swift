@@ -11,6 +11,8 @@ import SwiftUI
 struct MoviesApp: App {
     let persistenceController = PersistenceController.shared
     
+    @StateObject private var movieFavoritesManager = FavoritesManager<Movie>(key: "FavoriteMovies")
+    
     @StateObject private var viewModel = TrendingMoviesListViewModel()
     
     var body: some Scene {
@@ -31,6 +33,7 @@ struct MoviesApp: App {
                         Label("Search", systemImage: "magnifyingglass")
                     }
             }
+            .environmentObject(movieFavoritesManager)
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
