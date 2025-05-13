@@ -28,13 +28,14 @@ struct MovieDetailsView: View {
                     .padding(.horizontal)
                     
                     KFImage(viewModel.movieDetails?.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: 250)
-                        .clipped()
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 9 / 16) // Aspect ratio 16:9
+                                .clipped()
                     
                     if let movieDetails = viewModel.movieDetails {
                         GenreTagsView(genres: movieDetails.genres)
+                            .padding(.horizontal)
                     }
                     
                     HStack {
@@ -47,7 +48,7 @@ struct MovieDetailsView: View {
                     }
                 }
             }
-            .navigationTitle(viewModel.movieDetails?.title ?? "")
+            .navigationTitle(viewModel.movieDetails?.title ?? " ")
             .toolbar {
                 if let movieDetails = viewModel.movieDetails {
                     Button {
@@ -83,7 +84,7 @@ struct GenreTagsView: View {
                         .font(.caption)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 4)
-                        .background(Color.gray.opacity(0.2))
+                        .background(Color.gray.opacity(0.5))
                         .foregroundColor(.white)
                         .clipShape(Rectangle())
                 }
