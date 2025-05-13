@@ -15,12 +15,12 @@ protocol MovieServiceProtocol {
     func searchMovies(query: String, page: Int) async throws -> SearchMoviesResponse
 }
 
-class MovieAPIService: MovieServiceProtocol {
+class APIService: MovieServiceProtocol {
     
-    static let shared = MovieAPIService()
+    static let shared = APIService()
     
     func fetchTrendingMovies(page: Int) async throws -> TrendingMoviesResponse {
-        let endpoint = MoviesAPIEndpoints.trendingMovies
+        let endpoint = APIEndpoints.trendingMovies
         
         guard let url = URL(string: endpoint) else {
             throw NetworkingError.invalidURL
@@ -38,7 +38,7 @@ class MovieAPIService: MovieServiceProtocol {
         request.timeoutInterval = 10
         request.allHTTPHeaderFields = [
             "accept": "application/json",
-            "Authorization": "Bearer " + MoviesAPIEndpoints.apiKey
+            "Authorization": "Bearer " + APIEndpoints.apiKey
         ]
         
         do {
@@ -64,7 +64,7 @@ class MovieAPIService: MovieServiceProtocol {
     }
     
     func getMovieDetails(movieId: Int) async throws -> MovieDetails {
-        let endpoint = MoviesAPIEndpoints.movieDetails + "\(movieId)"
+        let endpoint = APIEndpoints.movieDetails + "\(movieId)"
         
         guard let url = URL(string: endpoint) else {
             throw NetworkingError.invalidURL
@@ -81,7 +81,7 @@ class MovieAPIService: MovieServiceProtocol {
         request.timeoutInterval = 10
         request.allHTTPHeaderFields = [
             "accept": "application/json",
-            "Authorization": "Bearer " + MoviesAPIEndpoints.apiKey
+            "Authorization": "Bearer " + APIEndpoints.apiKey
         ]
         
         do {
@@ -107,7 +107,7 @@ class MovieAPIService: MovieServiceProtocol {
     }
     
     func searchMovies(query: String, page: Int) async throws -> SearchMoviesResponse {
-        let endpoint = MoviesAPIEndpoints.searchMovies
+        let endpoint = APIEndpoints.searchMovies
         
         guard let url = URL(string: endpoint) else {
             throw NetworkingError.invalidURL
@@ -126,7 +126,7 @@ class MovieAPIService: MovieServiceProtocol {
         request.timeoutInterval = 10
         request.allHTTPHeaderFields = [
             "accept": "application/json",
-            "Authorization": "Bearer " + MoviesAPIEndpoints.apiKey
+            "Authorization": "Bearer " + APIEndpoints.apiKey
         ]
         
         do {

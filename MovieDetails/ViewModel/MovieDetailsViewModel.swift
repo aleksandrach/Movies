@@ -11,7 +11,7 @@ class MovieDetailsViewModel: ObservableObject {
     @Published var movieDetails: MovieDetails?
     @Published var errorMessage: String?
     
-    let service = MovieAPIService.shared
+    let service = APIService.shared
     
     @MainActor
     func getMovieDetails(movieId: Int) async {

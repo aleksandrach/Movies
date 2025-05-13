@@ -20,7 +20,7 @@ class SearchViewModel: ObservableObject {
     private var totalPages = 1
     private var isFetching = false
     private var cancellables = Set<AnyCancellable>()
-    private let service = MovieAPIService.shared
+    private let service = APIService.shared
     
     init() {
         observeSearchText()

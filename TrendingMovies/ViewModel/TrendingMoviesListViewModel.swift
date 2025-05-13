@@ -13,7 +13,7 @@ class TrendingMoviesListViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     @Published var errorMessage: String?
     
-    let service = MovieAPIService.shared
+    let service = APIService.shared
     
     private var currentPage = 1
     private var totalPages = 1
