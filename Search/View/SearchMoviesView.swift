@@ -11,27 +11,14 @@ struct SearchMoviesView: View {
     @StateObject private var viewModel = SearchViewModel()
     
     var body: some View {
-        NavigationStack {
-            List(viewModel.searchResults) { movie in
-                NavigationLink(
-                    destination: {
-                        MovieDetailsView(id: movie.id)
-                    },
-                    label: {
-                        MovieItemView(movie: movie)
-                            .onAppear {
-                                Task {
-                                    await viewModel.loadMoreIfNeeded(currentItem: movie)
-                                }
-                            }
-                    }
-                )
+        MoviesListView(movies: viewModel.searchResults,
+                       title: "Search",
+                       onItemAppear: { movie in
+            Task {
+                await viewModel.loadMoreIfNeeded(currentItem: movie)
             }
-            .listStyle(.plain)
-            .padding(.vertical)
-            .navigationTitle("Search")
-            .searchable(text: $viewModel.searchText, prompt: "Search movies...")
-        }
+        }, onAppear: nil)
+        .searchable(text: $viewModel.searchText, prompt: "Search movies...")
     }
 }
 

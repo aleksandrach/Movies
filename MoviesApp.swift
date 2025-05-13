@@ -16,7 +16,7 @@ struct MoviesApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                MoviesListView(viewModel: viewModel)
+                TrendingMoviesView(viewModel: viewModel)
                     .tabItem {
                         Label("Trending", systemImage: "chart.line.uptrend.xyaxis")
                     }
