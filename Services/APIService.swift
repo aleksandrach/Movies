@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum NetworkingError: Error {
+    case invalidURL
+    case invalidResponse
+    case invalidData
+    case unknown
+}
+
 protocol MovieServiceProtocol {
     func fetchTrendingMovies(page: Int) async throws -> TrendingMoviesResponse
     
@@ -19,20 +26,23 @@ class APIService: MovieServiceProtocol {
     
     static let shared = APIService()
     
-    func fetchTrendingMovies(page: Int) async throws -> TrendingMoviesResponse {
-        let endpoint = APIEndpoints.trendingMovies
-        
-        guard let url = URL(string: endpoint) else {
+    func performRequest<T: Decodable>(
+        endpoint: String,
+        pathComponent: String? = nil,
+        queryItems: [URLQueryItem] = []
+    ) async throws -> T {
+        var fullURLString = endpoint
+        if let path = pathComponent {
+            fullURLString += path
+        }
+
+        guard let url = URL(string: fullURLString) else {
             throw NetworkingError.invalidURL
         }
-        
+
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-        let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "language", value: "en-US"),
-            URLQueryItem(name: "page", value: "\(page)")
-        ]
         components.queryItems = (components.queryItems ?? []) + queryItems
-        
+
         var request = URLRequest(url: components.url!)
         request.httpMethod = "GET"
         request.timeoutInterval = 10
@@ -40,121 +50,50 @@ class APIService: MovieServiceProtocol {
             "accept": "application/json",
             "Authorization": "Bearer " + APIEndpoints.apiKey
         ]
-        
-        do {
-            let session = URLSession(configuration: .default)
 
-            let (data, response) = try await session.data(for: request)
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                throw NetworkingError.invalidResponse
-            }
-            
-            // Proceed with decoding only if status code is 200
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
-            let decoded = try decoder.decode(TrendingMoviesResponse.self, from: data)
-            return decoded
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw NetworkingError.invalidResponse
+        }
+
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+        do {
+            return try decoder.decode(T.self, from: data)
         } catch {
-            // Print out the error if the data fetching fails
-            print("Error fetching data: \(error.localizedDescription)")
+            print("Error decoding: \(error.localizedDescription)")
             throw NetworkingError.invalidData
         }
+    }
+    
+    func fetchTrendingMovies(page: Int) async throws -> TrendingMoviesResponse {
+        try await performRequest(
+            endpoint: APIEndpoints.trendingMovies,
+            queryItems: [
+                URLQueryItem(name: "language", value: "en-US"),
+                URLQueryItem(name: "page", value: "\(page)")
+            ]
+        )
     }
     
     func getMovieDetails(movieId: Int) async throws -> MovieDetails {
-        let endpoint = APIEndpoints.movieDetails + "\(movieId)"
-        
-        guard let url = URL(string: endpoint) else {
-            throw NetworkingError.invalidURL
-        }
-        
-        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-        let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "language", value: "en-US")
-        ]
-        components.queryItems = (components.queryItems ?? []) + queryItems
-        
-        var request = URLRequest(url: components.url!)
-        request.httpMethod = "GET"
-        request.timeoutInterval = 10
-        request.allHTTPHeaderFields = [
-            "accept": "application/json",
-            "Authorization": "Bearer " + APIEndpoints.apiKey
-        ]
-        
-        do {
-            let session = URLSession(configuration: .default)
-
-            let (data, response) = try await session.data(for: request)
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                throw NetworkingError.invalidResponse
-            }
-            
-            // Proceed with decoding only if status code is 200
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
-            let decoded = try decoder.decode(MovieDetails.self, from: data)
-            return decoded
-        } catch {
-            // Print out the error if the data fetching fails
-            print("Error fetching data: \(error.localizedDescription)")
-            throw NetworkingError.invalidData
-        }
+        try await performRequest(endpoint: APIEndpoints.movieDetails,
+                                 pathComponent: "\(movieId)",
+                                 queryItems: [
+                                    URLQueryItem(name: "language", value: "en-US")
+                                 ]
+        )
     }
     
     func searchMovies(query: String, page: Int) async throws -> SearchMoviesResponse {
-        let endpoint = APIEndpoints.searchMovies
-        
-        guard let url = URL(string: endpoint) else {
-            throw NetworkingError.invalidURL
-        }
-        
-        var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-        let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "language", value: "en-US"),
-            URLQueryItem(name: "page", value: "\(page)"),
-            URLQueryItem(name: "query", value: "\(query)")
-        ]
-        components.queryItems = (components.queryItems ?? []) + queryItems
-        
-        var request = URLRequest(url: components.url!)
-        request.httpMethod = "GET"
-        request.timeoutInterval = 10
-        request.allHTTPHeaderFields = [
-            "accept": "application/json",
-            "Authorization": "Bearer " + APIEndpoints.apiKey
-        ]
-        
-        do {
-            let session = URLSession(configuration: .default)
-
-            let (data, response) = try await session.data(for: request)
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                throw NetworkingError.invalidResponse
-            }
-            
-            // Proceed with decoding only if status code is 200
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
-            let decoded = try decoder.decode(SearchMoviesResponse.self, from: data)
-            return decoded
-        } catch {
-            // Print out the error if the data fetching fails
-            print("Error fetching data: \(error.localizedDescription)")
-            throw NetworkingError.invalidData
-        }
+        try await performRequest(endpoint: APIEndpoints.searchMovies,
+                                 queryItems: [
+                                    URLQueryItem(name: "language", value: "en-US"),
+                                    URLQueryItem(name: "page", value: "\(page)"),
+                                    URLQueryItem(name: "query", value: "\(query)")
+                                 ]
+        )
     }
-}
-
-enum NetworkingError: Error {
-    case invalidURL
-    case invalidResponse
-    case invalidData
-    case unknown
 }
