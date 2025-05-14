@@ -24,6 +24,10 @@ struct MovieDetailsView: View {
                         Text("\(viewModel.movieDetails?.formattedRuntime ?? "")")
                         
                         Spacer()
+                        
+                        if let movieDetails = viewModel.movieDetails {
+                            RatingView(movieDetails: movieDetails)
+                        }
                     }
                     .padding(.horizontal)
                     
@@ -38,14 +42,8 @@ struct MovieDetailsView: View {
                             .padding(.horizontal)
                     }
                     
-                    HStack {
-                        if let movieDetails = viewModel.movieDetails {
-                            RatingView(movieDetails: movieDetails)
-                            
-                            Text(viewModel.movieDetails?.overview ?? "N/A")
-                                .padding(4)
-                        }
-                    }
+                    Text(viewModel.movieDetails?.overview ?? "N/A")
+                        .padding(4)
                 }
             }
             .navigationTitle(viewModel.movieDetails?.title ?? " ")
@@ -98,10 +96,10 @@ struct RatingView: View {
     
     var body: some View {
         HStack {
+            Image(systemName: "star.fill")
+                .foregroundStyle(.yellow)
+            
             VStack {
-                Image(systemName: "star.fill")
-                    .foregroundStyle(.yellow)
-                
                 Text(String(format: "%.1f", movieDetails.voteAverage) + "/10")
                     .font(.headline)
                 
