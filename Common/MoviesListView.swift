@@ -27,7 +27,6 @@ struct MoviesListView: View {
                 )
             }
             .listStyle(.plain)
-            .padding(.vertical)
             .navigationTitle(title)
             .onAppear {
                 onAppear?()
