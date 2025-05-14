@@ -30,6 +30,11 @@ struct MoviesApp: App {
                     .tabItem {
                         Label("Search", systemImage: "magnifyingglass")
                     }
+                
+                AboutScreen()
+                    .tabItem {
+                        Label("About", systemImage: "info.circle")
+                    }
             }
             .environmentObject(movieFavoritesManager)
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
