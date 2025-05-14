@@ -15,7 +15,11 @@ struct MovieItemView: View {
     
     var body: some View {
         HStack {
-            KFImage(movie.image)
+            KFImage.url(movie.image)
+                .placeholder({
+                    Rectangle()
+                        .fill(.thinMaterial)
+                })
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 80, height: 120)

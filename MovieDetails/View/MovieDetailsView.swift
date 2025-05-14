@@ -40,11 +40,15 @@ struct MovieDetailsView: View {
                     }
                     .padding(.horizontal)
                     
-                    KFImage(viewModel.movieDetails?.image)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 9 / 16) // Aspect ratio 16:9
-                                .clipped()
+                    KFImage.url(viewModel.movieDetails?.image)
+                        .placeholder({
+                            Rectangle()
+                                .fill(.thinMaterial)
+                        })
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 9 / 16) // Aspect ratio 16:9
+                        .clipped()
                     
                     if let movieDetails = viewModel.movieDetails {
                         GenreTagsView(genres: movieDetails.genres)
