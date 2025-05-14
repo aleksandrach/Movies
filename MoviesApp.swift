@@ -13,12 +13,10 @@ struct MoviesApp: App {
     
     @StateObject private var movieFavoritesManager = FavoritesManager<Movie>(key: "FavoriteMovies")
     
-    @StateObject private var viewModel = TrendingMoviesListViewModel()
-    
     var body: some Scene {
         WindowGroup {
             TabView {
-                TrendingMoviesView(viewModel: viewModel)
+                TrendingMoviesView()
                     .tabItem {
                         Label("Trending", systemImage: "chart.line.uptrend.xyaxis")
                     }

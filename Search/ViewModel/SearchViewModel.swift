@@ -21,8 +21,11 @@ class SearchViewModel: ObservableObject {
     private var isFetching = false
     private var cancellables = Set<AnyCancellable>()
     private let service = APIService.shared
+    private let repository: MovieRepository
     
-    init() {
+    init(repository: MovieRepository = CoreDataMovieRepository()) {
+        self.repository = repository
+        
         observeSearchText()
     }
     
@@ -53,6 +56,8 @@ class SearchViewModel: ObservableObject {
             
             if page == 1 {
                 searchResults = response.results
+                
+                repository.saveMovies(searchResults)
             } else {
                 searchResults.append(contentsOf: response.results)
             }
@@ -61,6 +66,10 @@ class SearchViewModel: ObservableObject {
             totalPages = response.totalPages
         } catch {
             errorMessage = error.localizedDescription
+            
+            if page == 1 {
+                searchResults = repository.fetchCachedMovies(query: query)
+            }
         }
         
         isFetching = false

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TrendingMoviesView: View {
-    @ObservedObject var viewModel: TrendingMoviesListViewModel
+    @StateObject private var viewModel = TrendingMoviesListViewModel()
     
     var body: some View {
         MoviesListView(movies: viewModel.movies,
@@ -25,5 +25,5 @@ struct TrendingMoviesView: View {
 }
 
 #Preview {
-    TrendingMoviesView(viewModel: TrendingMoviesListViewModel())
+    TrendingMoviesView()
 }

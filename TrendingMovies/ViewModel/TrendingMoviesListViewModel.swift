@@ -15,6 +15,8 @@ class TrendingMoviesListViewModel: ObservableObject {
     
     let service = APIService.shared
     
+    private let repository: MovieRepository = CoreDataMovieRepository()
+
     private var currentPage = 1
     private var totalPages = 1
     private var isLoading = false
@@ -42,8 +44,11 @@ class TrendingMoviesListViewModel: ObservableObject {
             movies.append(contentsOf: response.results)
             totalPages = response.totalPages
             currentPage += 1
+            repository.saveMovies(movies)
         } catch {
+            print("API failed, loading cached trending")
             errorMessage = error.localizedDescription
+            self.movies = repository.fetchCachedMovies()
         }
         
         isLoading = false
