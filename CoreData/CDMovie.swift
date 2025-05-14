@@ -39,6 +39,6 @@ extension CDMovie {
         self.title = movie.title
         self.overview = movie.overview
         self.posterPath = movie.posterPath ?? ""
-        self.releaseDate = movie.releaseDate ?? ""
+        self.releaseDate = movie.releaseDate
     }
 }

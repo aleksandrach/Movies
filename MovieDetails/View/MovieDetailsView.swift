@@ -12,7 +12,7 @@ struct MovieDetailsView: View {
     @StateObject private var viewModel = MovieDetailsViewModel()
     @EnvironmentObject var favoritesManager: FavoritesManager<Movie>
     
-    //There is some Apple bug, if you set the navTitle like this: .navigationTitle(viewModel.movieDetails?.title ?? " "), it will show "" on the screen - so added computed property
+    // It seems that here is some Apple bug, if you set the navTitle like this: .navigationTitle(viewModel.movieDetails?.title ?? " "), it will show "" on the screen - so added computed property
     var navigationTitle: String {
         if let title = viewModel.movieDetails?.title {
             return title

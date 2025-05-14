@@ -42,7 +42,10 @@ class SearchViewModel: ObservableObject {
     }
     
     func searchMovies(query: String, page: Int = 1) async {
-        guard query.count > 2 else { return }
+        guard query.count > 2 else {
+            searchResults = []
+            return
+        }
         
 //        guard !query.trimmingCharacters(in: .whitespaces).isEmpty else {
 //            searchResults = []

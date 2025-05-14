@@ -36,14 +36,14 @@ final class CoreDataMovieRepository: MovieRepository {
                 existing.title = movie.title
                 existing.overview = movie.overview
                 existing.posterPath = movie.posterPath ?? ""
-                existing.releaseDate = movie.releaseDate ?? ""
+                existing.releaseDate = movie.releaseDate
             } else {
                 let newMovie = CDMovie(context: context)
                 newMovie.id = Int64(movie.id)
                 newMovie.title = movie.title
                 newMovie.overview = movie.overview
                 newMovie.posterPath = movie.posterPath ?? ""
-                newMovie.releaseDate = movie.releaseDate ?? ""
+                newMovie.releaseDate = movie.releaseDate
             }
         }
 
