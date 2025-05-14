@@ -34,7 +34,6 @@ class SearchViewModel: ObservableObject {
             .debounce(for: .milliseconds(400), scheduler: RunLoop.main)
             .removeDuplicates()
             .sink { [weak self] query in
-                print("Searching for:", query) // <-- debug log
                 Task {
                     await self?.searchMovies(query: query)
                 }
@@ -43,10 +42,12 @@ class SearchViewModel: ObservableObject {
     }
     
     func searchMovies(query: String, page: Int = 1) async {
-        guard !query.trimmingCharacters(in: .whitespaces).isEmpty else {
-            searchResults = []
-            return
-        }
+        guard query.count > 2 else { return }
+        
+//        guard !query.trimmingCharacters(in: .whitespaces).isEmpty else {
+//            searchResults = []
+//            return
+//        }
         
         guard !isFetching else { return }
         isFetching = true
