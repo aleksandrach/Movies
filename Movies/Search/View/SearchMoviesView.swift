@@ -17,7 +17,8 @@ struct SearchMoviesView: View {
             Task {
                 await viewModel.loadMoreIfNeeded(currentItem: movie)
             }
-        }, onAppear: nil)
+        }, onAppear: nil,
+                       accessibilityPrefix: "search")
         .searchable(text: $viewModel.searchText, prompt: "Search movies...")
     }
 }

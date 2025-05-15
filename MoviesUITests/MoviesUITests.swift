@@ -21,14 +21,42 @@ final class MoviesUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testSearchAndFavoriteTitanicMovie() throws {
         let app = XCUIApplication()
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Tap the Search tab
+        app.buttons["Search"].tap()
+
+        // Tap and enter "Titanic" in the search field
+        let searchField = app.searchFields["Search movies..."]
+        XCTAssertTrue(searchField.waitForExistence(timeout: 5), "Search field should exist")
+        searchField.tap()
+        searchField.typeText("Titanic")
+
+        // Wait for the Titanic result to appear using accessibility identifier
+        let movieId = 597
+        let movieIdentifier = "search_movie_titanic_\(movieId)"
+        let titanicCell = app.buttons[movieIdentifier]
+
+        XCTAssertTrue(titanicCell.waitForExistence(timeout: 5), "Titanic movie cell should exist in Search results")
+        titanicCell.tap()
+
+        // Tap the favorite button
+        let favoriteButton = app.buttons["favorite_button"]
+        XCTAssertTrue(favoriteButton.waitForExistence(timeout: 5), "Favorite button should exist on movie details screen")
+        favoriteButton.tap()
+
+        // Navigate to Favorites tab
+        app.buttons["Favorites"].tap()
+
+        // Confirm Titanic appears in Favorites
+        let favoriteMovieIdentifier = "favorites_movie_titanic_\(movieId)"
+        let favoriteMovieCell = app.buttons[favoriteMovieIdentifier]
+
+        XCTAssertTrue(favoriteMovieCell.waitForExistence(timeout: 5), "Titanic movie should appear in Favorites")
     }
 
     @MainActor

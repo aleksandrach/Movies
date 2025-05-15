@@ -12,15 +12,16 @@ struct TrendingMoviesView: View {
     
     var body: some View {
         MoviesListView(movies: viewModel.movies,
-                       title: "Trending") { movie in
+                       title: "Trending",
+                       onItemAppear: { movie in
             Task {
                 await viewModel.loadMoreMoviesIfNeeded(currentItem: movie)
             }
-        } onAppear: {
+        }, onAppear: {
             Task {
                 await viewModel.fetchTrendingMovies()
             }
-        }
+        }, accessibilityPrefix: "trending")
     }
 }
 

@@ -14,7 +14,8 @@ struct FavoritesView: View {
         MoviesListView(movies: favoritesManager.favorites,
                        title: "Favorites",
                        onItemAppear: nil,
-                       onAppear: nil)
+                       onAppear: nil,
+                       accessibilityPrefix: "favorites")
     }
 }
 

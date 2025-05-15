@@ -12,6 +12,7 @@ struct MoviesListView: View {
     let title: String
     let onItemAppear: ((Movie) -> Void)?
     let onAppear: (() -> Void)?
+    let accessibilityPrefix: String // e.g. "search" or "favorites"
     
     var body: some View {
         NavigationStack {
@@ -25,7 +26,7 @@ struct MoviesListView: View {
                             }
                     }
                 )
-                .accessibilityIdentifier("movie_\(movie.title.replacingOccurrences(of: " ", with: "_").lowercased())")
+                .accessibilityIdentifier("\(accessibilityPrefix)_movie_\(movie.title.replacingOccurrences(of: " ", with: "_").lowercased())_\(movie.id)")
             }
             .listStyle(.plain)
             .navigationTitle(title)

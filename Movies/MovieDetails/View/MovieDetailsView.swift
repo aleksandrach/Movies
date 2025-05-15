@@ -67,6 +67,7 @@ struct MovieDetailsView: View {
                     } label: {
                         FavoriteImage(favorite: favoritesManager.contains(movieDetails.asMovie))
                     }
+                    .accessibilityIdentifier("favorite_button")
                 }
             }
             .onAppear {
