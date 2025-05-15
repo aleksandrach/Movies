@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A84A46C82DD5CE5F00FF421E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A84A46A62DD5CE5F00FF421E /* .swiftlint.yml */; };
 		A8B1A11E2DD1E24900896F18 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A8B1A11D2DD1E24900896F18 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A84A46A62DD5CE5F00FF421E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A8B1A08B2DD1DE1500896F18 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B1A09D2DD1DE1600896F18 /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B1A0A72DD1DE1600896F18 /* MoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B1A08D2DD1DE1500896F18 /* Movies */,
+				A84A46A62DD5CE5F00FF421E /* .swiftlint.yml */,
 				A8B1A0A02DD1DE1600896F18 /* MoviesTests */,
 				A8B1A0AA2DD1DE1600896F18 /* MoviesUITests */,
 				A8B1A08C2DD1DE1500896F18 /* Products */,
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A84A46C82DD5CE5F00FF421E /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
