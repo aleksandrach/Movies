@@ -35,13 +35,7 @@ struct MovieItemView: View {
                     Button {
                         favoritesManager.toggleFavorite(movie)
                     } label: {
-                        if favoritesManager.contains(movie) {
-                            Image(systemName: "star.fill")
-                                .foregroundStyle(.yellow)
-                        } else {
-                            Image(systemName: "star")
-                                .foregroundStyle(.yellow)
-                        }
+                        FavoriteImage(favorite: favoritesManager.contains(movie))
                     }
                 }
                 

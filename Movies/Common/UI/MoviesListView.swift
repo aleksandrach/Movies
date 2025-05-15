@@ -25,6 +25,7 @@ struct MoviesListView: View {
                             }
                     }
                 )
+                .accessibilityIdentifier("movie_\(movie.title.replacingOccurrences(of: " ", with: "_").lowercased())")
             }
             .listStyle(.plain)
             .navigationTitle(title)

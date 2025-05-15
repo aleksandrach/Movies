@@ -65,13 +65,7 @@ struct MovieDetailsView: View {
                     Button {
                         favoritesManager.toggleFavorite(movieDetails.asMovie)
                     } label: {
-                        if favoritesManager.contains(movieDetails.asMovie) {
-                            Image(systemName: "star.fill")
-                                .foregroundStyle(.yellow)
-                        } else {
-                            Image(systemName: "star")
-                                .foregroundStyle(.yellow)
-                        }
+                        FavoriteImage(favorite: favoritesManager.contains(movieDetails.asMovie))
                     }
                 }
             }
