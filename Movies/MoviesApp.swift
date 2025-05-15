@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MovieModels
 
 @main
 struct MoviesApp: App {

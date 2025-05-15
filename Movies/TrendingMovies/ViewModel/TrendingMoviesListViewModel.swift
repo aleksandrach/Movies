@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import MovieModels
 
 class TrendingMoviesListViewModel: ObservableObject {
     @Published var movies: [Movie] = []

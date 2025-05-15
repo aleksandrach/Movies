@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import MovieModels
 
 // MARK: - Protocol
 
@@ -17,8 +18,6 @@ protocol MovieRepository {
 }
 
 final class CoreDataMovieRepository: MovieRepository {
-
-    private let apiService = APIService()
     private let context: NSManagedObjectContext
 
     init(context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {

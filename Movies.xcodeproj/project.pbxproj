@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A84A46C82DD5CE5F00FF421E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A84A46A62DD5CE5F00FF421E /* .swiftlint.yml */; };
+		A86DD50B2DD616E90067BDD6 /* MovieModels in Frameworks */ = {isa = PBXBuildFile; productRef = A86DD50A2DD616E90067BDD6 /* MovieModels */; };
+		A86DD5612DD61B100067BDD6 /* MovieModels in Frameworks */ = {isa = PBXBuildFile; productRef = A86DD5602DD61B100067BDD6 /* MovieModels */; };
+		A86DD5B62DD61B990067BDD6 /* MovieModels in Frameworks */ = {isa = PBXBuildFile; productRef = A86DD5B52DD61B990067BDD6 /* MovieModels */; };
 		A8B1A11E2DD1E24900896F18 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A8B1A11D2DD1E24900896F18 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		A84A46A62DD5CE5F00FF421E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A86DD4B52DD615D50067BDD6 /* MovieModels */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MovieModels; sourceTree = "<group>"; };
 		A8B1A08B2DD1DE1500896F18 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B1A09D2DD1DE1600896F18 /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B1A0A72DD1DE1600896F18 /* MoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +43,16 @@
 		A8B1A1222DD1EE5200896F18 /* Exceptions for "Movies" folder in "Movies" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Common/FavoritesManager.swift,
 				Info.plist,
+				MovieDetails/Model/MovieDetails.swift,
+				Search/Model/SearchMoviesResponse.swift,
+				Services/APIEndpoints.swift,
+				Services/APIService.swift,
+				Services/AppEnvironment.swift,
+				TrendingMovies/Model/Movie.swift,
+				TrendingMovies/Model/TrendingMoviesResponse.swift,
+				Utilities/DateUtils.swift,
 			);
 			target = A8B1A08A2DD1DE1500896F18 /* Movies */;
 		};
@@ -72,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B1A11E2DD1E24900896F18 /* Kingfisher in Frameworks */,
+				A86DD50B2DD616E90067BDD6 /* MovieModels in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86DD5612DD61B100067BDD6 /* MovieModels in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,19 +101,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86DD5B62DD61B990067BDD6 /* MovieModels in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A86DD55F2DD61B100067BDD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A8B1A0822DD1DE1500896F18 = {
 			isa = PBXGroup;
 			children = (
+				A86DD4B52DD615D50067BDD6 /* MovieModels */,
 				A8B1A08D2DD1DE1500896F18 /* Movies */,
 				A84A46A62DD5CE5F00FF421E /* .swiftlint.yml */,
 				A8B1A0A02DD1DE1600896F18 /* MoviesTests */,
 				A8B1A0AA2DD1DE1600896F18 /* MoviesUITests */,
+				A86DD55F2DD61B100067BDD6 /* Frameworks */,
 				A8B1A08C2DD1DE1500896F18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,6 +160,7 @@
 			name = Movies;
 			packageProductDependencies = (
 				A8B1A11D2DD1E24900896F18 /* Kingfisher */,
+				A86DD50A2DD616E90067BDD6 /* MovieModels */,
 			);
 			productName = Movies;
 			productReference = A8B1A08B2DD1DE1500896F18 /* Movies.app */;
@@ -158,6 +184,7 @@
 			);
 			name = MoviesTests;
 			packageProductDependencies = (
+				A86DD5602DD61B100067BDD6 /* MovieModels */,
 			);
 			productName = MoviesTests;
 			productReference = A8B1A09D2DD1DE1600896F18 /* MoviesTests.xctest */;
@@ -181,6 +208,7 @@
 			);
 			name = MoviesUITests;
 			packageProductDependencies = (
+				A86DD5B52DD61B990067BDD6 /* MovieModels */,
 			);
 			productName = MoviesUITests;
 			productReference = A8B1A0A72DD1DE1600896F18 /* MoviesUITests.xctest */;
@@ -221,6 +249,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A8B1A11C2DD1E24900896F18 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A86DD5092DD616E90067BDD6 /* XCLocalSwiftPackageReference "MovieModels" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A8B1A08C2DD1DE1500896F18 /* Products */;
@@ -886,6 +915,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		A86DD5092DD616E90067BDD6 /* XCLocalSwiftPackageReference "MovieModels" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MovieModels;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		A8B1A11C2DD1E24900896F18 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -898,6 +934,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A86DD50A2DD616E90067BDD6 /* MovieModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MovieModels;
+		};
+		A86DD5602DD61B100067BDD6 /* MovieModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MovieModels;
+		};
+		A86DD5B52DD61B990067BDD6 /* MovieModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MovieModels;
+		};
 		A8B1A11D2DD1E24900896F18 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A8B1A11C2DD1E24900896F18 /* XCRemoteSwiftPackageReference "Kingfisher" */;

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MovieModels
 
 class MovieDetailsViewModel: ObservableObject {
     @Published var movieDetails: MovieDetails?

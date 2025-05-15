@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import MovieModels
 
 @objc(CDMovie)
 public class CDMovie: NSManagedObject {}

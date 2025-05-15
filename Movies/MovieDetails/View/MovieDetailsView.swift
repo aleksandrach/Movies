@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Kingfisher
+import MovieModels
 
 struct MovieDetailsView: View {
     @StateObject private var viewModel = MovieDetailsViewModel()

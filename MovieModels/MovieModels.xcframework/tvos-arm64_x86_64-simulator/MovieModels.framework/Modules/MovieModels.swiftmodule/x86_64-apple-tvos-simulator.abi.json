@@ -1,0 +1,4412 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "MovieModels",
+    "printedName": "MovieModels",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APIEndpoints",
+        "printedName": "APIEndpoints",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "apiKey",
+            "printedName": "apiKey",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels12APIEndpointsO6apiKeySSvpZ",
+            "mangledName": "$s11MovieModels12APIEndpointsO6apiKeySSvpZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels12APIEndpointsO6apiKeySSvgZ",
+                "mangledName": "$s11MovieModels12APIEndpointsO6apiKeySSvgZ",
+                "moduleName": "MovieModels",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trendingMovies",
+            "printedName": "trendingMovies",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels12APIEndpointsO14trendingMoviesSSvpZ",
+            "mangledName": "$s11MovieModels12APIEndpointsO14trendingMoviesSSvpZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels12APIEndpointsO14trendingMoviesSSvgZ",
+                "mangledName": "$s11MovieModels12APIEndpointsO14trendingMoviesSSvgZ",
+                "moduleName": "MovieModels",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "movieDetails",
+            "printedName": "movieDetails",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels12APIEndpointsO12movieDetailsSSvpZ",
+            "mangledName": "$s11MovieModels12APIEndpointsO12movieDetailsSSvpZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels12APIEndpointsO12movieDetailsSSvgZ",
+                "mangledName": "$s11MovieModels12APIEndpointsO12movieDetailsSSvgZ",
+                "moduleName": "MovieModels",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "searchMovies",
+            "printedName": "searchMovies",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels12APIEndpointsO12searchMoviesSSvpZ",
+            "mangledName": "$s11MovieModels12APIEndpointsO12searchMoviesSSvpZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels12APIEndpointsO12searchMoviesSSvgZ",
+                "mangledName": "$s11MovieModels12APIEndpointsO12searchMoviesSSvgZ",
+                "moduleName": "MovieModels",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "imageURL",
+            "printedName": "imageURL",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels12APIEndpointsO8imageURLSSvpZ",
+            "mangledName": "$s11MovieModels12APIEndpointsO8imageURLSSvpZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels12APIEndpointsO8imageURLSSvgZ",
+                "mangledName": "$s11MovieModels12APIEndpointsO8imageURLSSvgZ",
+                "moduleName": "MovieModels",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11MovieModels12APIEndpointsO",
+        "mangledName": "$s11MovieModels12APIEndpointsO",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkingError",
+        "printedName": "NetworkingError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invalidURL",
+            "printedName": "invalidURL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MovieModels.NetworkingError.Type) -> MovieModels.NetworkingError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkingError",
+                    "printedName": "MovieModels.NetworkingError",
+                    "usr": "s:11MovieModels15NetworkingErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MovieModels.NetworkingError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkingError",
+                        "printedName": "MovieModels.NetworkingError",
+                        "usr": "s:11MovieModels15NetworkingErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11MovieModels15NetworkingErrorO10invalidURLyA2CmF",
+            "mangledName": "$s11MovieModels15NetworkingErrorO10invalidURLyA2CmF",
+            "moduleName": "MovieModels"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidResponse",
+            "printedName": "invalidResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MovieModels.NetworkingError.Type) -> MovieModels.NetworkingError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkingError",
+                    "printedName": "MovieModels.NetworkingError",
+                    "usr": "s:11MovieModels15NetworkingErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MovieModels.NetworkingError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkingError",
+                        "printedName": "MovieModels.NetworkingError",
+                        "usr": "s:11MovieModels15NetworkingErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11MovieModels15NetworkingErrorO15invalidResponseyA2CmF",
+            "mangledName": "$s11MovieModels15NetworkingErrorO15invalidResponseyA2CmF",
+            "moduleName": "MovieModels"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidData",
+            "printedName": "invalidData",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MovieModels.NetworkingError.Type) -> MovieModels.NetworkingError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkingError",
+                    "printedName": "MovieModels.NetworkingError",
+                    "usr": "s:11MovieModels15NetworkingErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MovieModels.NetworkingError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkingError",
+                        "printedName": "MovieModels.NetworkingError",
+                        "usr": "s:11MovieModels15NetworkingErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11MovieModels15NetworkingErrorO11invalidDatayA2CmF",
+            "mangledName": "$s11MovieModels15NetworkingErrorO11invalidDatayA2CmF",
+            "moduleName": "MovieModels"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MovieModels.NetworkingError.Type) -> MovieModels.NetworkingError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NetworkingError",
+                    "printedName": "MovieModels.NetworkingError",
+                    "usr": "s:11MovieModels15NetworkingErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MovieModels.NetworkingError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NetworkingError",
+                        "printedName": "MovieModels.NetworkingError",
+                        "usr": "s:11MovieModels15NetworkingErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11MovieModels15NetworkingErrorO7unknownyA2CmF",
+            "mangledName": "$s11MovieModels15NetworkingErrorO7unknownyA2CmF",
+            "moduleName": "MovieModels"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkingError",
+                "printedName": "MovieModels.NetworkingError",
+                "usr": "s:11MovieModels15NetworkingErrorO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkingError",
+                "printedName": "MovieModels.NetworkingError",
+                "usr": "s:11MovieModels15NetworkingErrorO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels15NetworkingErrorO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11MovieModels15NetworkingErrorO2eeoiySbAC_ACtFZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels15NetworkingErrorO9hashValueSivp",
+            "mangledName": "$s11MovieModels15NetworkingErrorO9hashValueSivp",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels15NetworkingErrorO9hashValueSivg",
+                "mangledName": "$s11MovieModels15NetworkingErrorO9hashValueSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels15NetworkingErrorO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s11MovieModels15NetworkingErrorO4hash4intoys6HasherVz_tF",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11MovieModels15NetworkingErrorO",
+        "mangledName": "$s11MovieModels15NetworkingErrorO",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MovieServiceProtocol",
+        "printedName": "MovieServiceProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "fetchTrendingMovies",
+            "printedName": "fetchTrendingMovies(page:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrendingMoviesResponse",
+                "printedName": "MovieModels.TrendingMoviesResponse",
+                "usr": "s:11MovieModels22TrendingMoviesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels0A15ServiceProtocolP19fetchTrendingMovies4pageAA0fG8ResponseVSi_tYaKF",
+            "mangledName": "$s11MovieModels0A15ServiceProtocolP19fetchTrendingMovies4pageAA0fG8ResponseVSi_tYaKF",
+            "moduleName": "MovieModels",
+            "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.MovieServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : MovieModels.MovieServiceProtocol>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getMovieDetails",
+            "printedName": "getMovieDetails(movieId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MovieDetails",
+                "printedName": "MovieModels.MovieDetails",
+                "usr": "s:11MovieModels0A7DetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels0A15ServiceProtocolP03getA7Details7movieIdAA0aF0VSi_tYaKF",
+            "mangledName": "$s11MovieModels0A15ServiceProtocolP03getA7Details7movieIdAA0aF0VSi_tYaKF",
+            "moduleName": "MovieModels",
+            "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.MovieServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : MovieModels.MovieServiceProtocol>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "searchMovies",
+            "printedName": "searchMovies(query:page:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SearchMoviesResponse",
+                "printedName": "MovieModels.SearchMoviesResponse",
+                "usr": "s:11MovieModels20SearchMoviesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels0A15ServiceProtocolP12searchMovies5query4pageAA06SearchF8ResponseVSS_SitYaKF",
+            "mangledName": "$s11MovieModels0A15ServiceProtocolP12searchMovies5query4pageAA06SearchF8ResponseVSS_SitYaKF",
+            "moduleName": "MovieModels",
+            "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.MovieServiceProtocol>",
+            "sugared_genericSig": "<Self where Self : MovieModels.MovieServiceProtocol>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11MovieModels0A15ServiceProtocolP",
+        "mangledName": "$s11MovieModels0A15ServiceProtocolP",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "APIService",
+        "printedName": "APIService",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APIService",
+                "printedName": "MovieModels.APIService",
+                "usr": "s:11MovieModels10APIServiceC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels10APIServiceC6sharedACvpZ",
+            "mangledName": "$s11MovieModels10APIServiceC6sharedACvpZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "APIService",
+                    "printedName": "MovieModels.APIService",
+                    "usr": "s:11MovieModels10APIServiceC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels10APIServiceC6sharedACvgZ",
+                "mangledName": "$s11MovieModels10APIServiceC6sharedACvgZ",
+                "moduleName": "MovieModels",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "performRequest",
+            "printedName": "performRequest(endpoint:pathComponent:queryItems:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.URLQueryItem]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URLQueryItem",
+                    "printedName": "Foundation.URLQueryItem",
+                    "usr": "s:10Foundation12URLQueryItemV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels10APIServiceC14performRequest8endpoint13pathComponent10queryItemsxSS_SSSgSay10Foundation12URLQueryItemVGtYaKSeRzlF",
+            "mangledName": "$s11MovieModels10APIServiceC14performRequest8endpoint13pathComponent10queryItemsxSS_SSSgSay10Foundation12URLQueryItemVGtYaKSeRzlF",
+            "moduleName": "MovieModels",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fetchTrendingMovies",
+            "printedName": "fetchTrendingMovies(page:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrendingMoviesResponse",
+                "printedName": "MovieModels.TrendingMoviesResponse",
+                "usr": "s:11MovieModels22TrendingMoviesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels10APIServiceC19fetchTrendingMovies4pageAA0eF8ResponseVSi_tYaKF",
+            "mangledName": "$s11MovieModels10APIServiceC19fetchTrendingMovies4pageAA0eF8ResponseVSi_tYaKF",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getMovieDetails",
+            "printedName": "getMovieDetails(movieId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MovieDetails",
+                "printedName": "MovieModels.MovieDetails",
+                "usr": "s:11MovieModels0A7DetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels10APIServiceC03getA7Details7movieIdAA0aE0VSi_tYaKF",
+            "mangledName": "$s11MovieModels10APIServiceC03getA7Details7movieIdAA0aE0VSi_tYaKF",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "searchMovies",
+            "printedName": "searchMovies(query:page:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SearchMoviesResponse",
+                "printedName": "MovieModels.SearchMoviesResponse",
+                "usr": "s:11MovieModels20SearchMoviesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels10APIServiceC12searchMovies5query4pageAA06SearchE8ResponseVSS_SitYaKF",
+            "mangledName": "$s11MovieModels10APIServiceC12searchMovies5query4pageAA06SearchE8ResponseVSS_SitYaKF",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "APIService",
+                "printedName": "MovieModels.APIService",
+                "usr": "s:11MovieModels10APIServiceC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels10APIServiceCACycfc",
+            "mangledName": "$s11MovieModels10APIServiceCACycfc",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11MovieModels10APIServiceC",
+        "mangledName": "$s11MovieModels10APIServiceC",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MovieServiceProtocol",
+            "printedName": "MovieServiceProtocol",
+            "usr": "s:11MovieModels0A15ServiceProtocolP",
+            "mangledName": "$s11MovieModels0A15ServiceProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppEnvironment",
+        "printedName": "AppEnvironment",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "current",
+            "printedName": "current",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Environment",
+                "printedName": "MovieModels.AppEnvironment.Environment",
+                "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels14AppEnvironmentO7currentAC0D0OvpZ",
+            "mangledName": "$s11MovieModels14AppEnvironmentO7currentAC0D0OvpZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "MovieModels.AppEnvironment.Environment",
+                    "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels14AppEnvironmentO7currentAC0D0OvgZ",
+                "mangledName": "$s11MovieModels14AppEnvironmentO7currentAC0D0OvgZ",
+                "moduleName": "MovieModels",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Environment",
+            "printedName": "Environment",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "dev",
+                "printedName": "dev",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MovieModels.AppEnvironment.Environment.Type) -> MovieModels.AppEnvironment.Environment",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Environment",
+                        "printedName": "MovieModels.AppEnvironment.Environment",
+                        "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MovieModels.AppEnvironment.Environment.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Environment",
+                            "printedName": "MovieModels.AppEnvironment.Environment",
+                            "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11MovieModels14AppEnvironmentO0D0O3devyA2EmF",
+                "mangledName": "$s11MovieModels14AppEnvironmentO0D0O3devyA2EmF",
+                "moduleName": "MovieModels",
+                "fixedbinaryorder": 0
+              },
+              {
+                "kind": "Var",
+                "name": "prod",
+                "printedName": "prod",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MovieModels.AppEnvironment.Environment.Type) -> MovieModels.AppEnvironment.Environment",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Environment",
+                        "printedName": "MovieModels.AppEnvironment.Environment",
+                        "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MovieModels.AppEnvironment.Environment.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Environment",
+                            "printedName": "MovieModels.AppEnvironment.Environment",
+                            "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11MovieModels14AppEnvironmentO0D0O4prodyA2EmF",
+                "mangledName": "$s11MovieModels14AppEnvironmentO0D0O4prodyA2EmF",
+                "moduleName": "MovieModels",
+                "fixedbinaryorder": 1
+              },
+              {
+                "kind": "Var",
+                "name": "unknown",
+                "printedName": "unknown",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MovieModels.AppEnvironment.Environment.Type) -> MovieModels.AppEnvironment.Environment",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Environment",
+                        "printedName": "MovieModels.AppEnvironment.Environment",
+                        "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "MovieModels.AppEnvironment.Environment.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Environment",
+                            "printedName": "MovieModels.AppEnvironment.Environment",
+                            "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:11MovieModels14AppEnvironmentO0D0O7unknownyA2EmF",
+                "mangledName": "$s11MovieModels14AppEnvironmentO0D0O7unknownyA2EmF",
+                "moduleName": "MovieModels",
+                "fixedbinaryorder": 2
+              },
+              {
+                "kind": "Var",
+                "name": "baseURL",
+                "printedName": "baseURL",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11MovieModels14AppEnvironmentO0D0O7baseURLSSvp",
+                "mangledName": "$s11MovieModels14AppEnvironmentO0D0O7baseURLSSvp",
+                "moduleName": "MovieModels",
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11MovieModels14AppEnvironmentO0D0O7baseURLSSvg",
+                    "mangledName": "$s11MovieModels14AppEnvironmentO0D0O7baseURLSSvg",
+                    "moduleName": "MovieModels",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "MovieModels.AppEnvironment.Environment",
+                    "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "MovieModels.AppEnvironment.Environment",
+                    "usr": "s:11MovieModels14AppEnvironmentO0D0O"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:11MovieModels14AppEnvironmentO0D0O2eeoiySbAE_AEtFZ",
+                "mangledName": "$s11MovieModels14AppEnvironmentO0D0O2eeoiySbAE_AEtFZ",
+                "moduleName": "MovieModels",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:11MovieModels14AppEnvironmentO0D0O9hashValueSivp",
+                "mangledName": "$s11MovieModels14AppEnvironmentO0D0O9hashValueSivp",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:11MovieModels14AppEnvironmentO0D0O9hashValueSivg",
+                    "mangledName": "$s11MovieModels14AppEnvironmentO0D0O9hashValueSivg",
+                    "moduleName": "MovieModels",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:11MovieModels14AppEnvironmentO0D0O4hash4intoys6HasherVz_tF",
+                "mangledName": "$s11MovieModels14AppEnvironmentO0D0O4hash4intoys6HasherVz_tF",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:11MovieModels14AppEnvironmentO0D0O",
+            "mangledName": "$s11MovieModels14AppEnvironmentO0D0O",
+            "moduleName": "MovieModels",
+            "isEnumExhaustive": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "BitwiseCopyable",
+                "printedName": "BitwiseCopyable",
+                "usr": "s:s15BitwiseCopyableP",
+                "mangledName": "$ss15BitwiseCopyableP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11MovieModels14AppEnvironmentO",
+        "mangledName": "$s11MovieModels14AppEnvironmentO",
+        "moduleName": "MovieModels",
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Favoritable",
+        "printedName": "Favoritable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels11FavoritableP2idSivp",
+            "mangledName": "$s11MovieModels11FavoritableP2idSivp",
+            "moduleName": "MovieModels",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels11FavoritableP2idSivg",
+                "mangledName": "$s11MovieModels11FavoritableP2idSivg",
+                "moduleName": "MovieModels",
+                "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.Favoritable>",
+                "sugared_genericSig": "<Self where Self : MovieModels.Favoritable>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11MovieModels11FavoritableP",
+        "mangledName": "$s11MovieModels11FavoritableP",
+        "moduleName": "MovieModels",
+        "genericSig": "<τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable, τ_0_0 : Swift.Equatable, τ_0_0 : Swift.Identifiable>",
+        "sugared_genericSig": "<Self : Swift.Decodable, Self : Swift.Encodable, Self : Swift.Equatable, Self : Swift.Identifiable>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "MovieModels"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FavoritesManager",
+        "printedName": "FavoritesManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "favorites",
+            "printedName": "favorites",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels16FavoritesManagerC9favoritesSayxGvp",
+            "mangledName": "$s11MovieModels16FavoritesManagerC9favoritesSayxGvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "Final",
+              "ProjectedValueProperty",
+              "SetterAccess",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels16FavoritesManagerC9favoritesSayxGvg",
+                "mangledName": "$s11MovieModels16FavoritesManagerC9favoritesSayxGvg",
+                "moduleName": "MovieModels",
+                "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.Favoritable>",
+                "sugared_genericSig": "<T where T : MovieModels.Favoritable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$favorites",
+            "printedName": "$favorites",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<Swift.Array<τ_0_0>>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels16FavoritesManagerC10$favorites7Combine9PublishedV9PublisherVySayxG_Gvp",
+            "mangledName": "$s11MovieModels16FavoritesManagerC10$favorites7Combine9PublishedV9PublisherVySayxG_Gvp",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Array<τ_0_0>>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels16FavoritesManagerC10$favorites7Combine9PublishedV9PublisherVySayxG_Gvg",
+                "mangledName": "$s11MovieModels16FavoritesManagerC10$favorites7Combine9PublishedV9PublisherVySayxG_Gvg",
+                "moduleName": "MovieModels",
+                "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.Favoritable>",
+                "sugared_genericSig": "<T where T : MovieModels.Favoritable>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(key:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FavoritesManager",
+                "printedName": "MovieModels.FavoritesManager<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:11MovieModels16FavoritesManagerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels16FavoritesManagerC3keyACyxGSS_tcfc",
+            "mangledName": "$s11MovieModels16FavoritesManagerC3keyACyxGSS_tcfc",
+            "moduleName": "MovieModels",
+            "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.Favoritable>",
+            "sugared_genericSig": "<T where T : MovieModels.Favoritable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "toggleFavorite",
+            "printedName": "toggleFavorite(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels16FavoritesManagerC14toggleFavoriteyyxF",
+            "mangledName": "$s11MovieModels16FavoritesManagerC14toggleFavoriteyyxF",
+            "moduleName": "MovieModels",
+            "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.Favoritable>",
+            "sugared_genericSig": "<T where T : MovieModels.Favoritable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "contains",
+            "printedName": "contains(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels16FavoritesManagerC8containsySbxF",
+            "mangledName": "$s11MovieModels16FavoritesManagerC8containsySbxF",
+            "moduleName": "MovieModels",
+            "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.Favoritable>",
+            "sugared_genericSig": "<T where T : MovieModels.Favoritable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getFavorites",
+            "printedName": "getFavorites()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels16FavoritesManagerC03getC0SayxGyF",
+            "mangledName": "$s11MovieModels16FavoritesManagerC03getC0SayxGyF",
+            "moduleName": "MovieModels",
+            "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.Favoritable>",
+            "sugared_genericSig": "<T where T : MovieModels.Favoritable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11MovieModels16FavoritesManagerC",
+        "mangledName": "$s11MovieModels16FavoritesManagerC",
+        "moduleName": "MovieModels",
+        "genericSig": "<τ_0_0 where τ_0_0 : MovieModels.Favoritable>",
+        "sugared_genericSig": "<T where T : MovieModels.Favoritable>",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Movie",
+        "printedName": "Movie",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A0V2idSivp",
+            "mangledName": "$s11MovieModels0A0V2idSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A0V2idSivg",
+                "mangledName": "$s11MovieModels0A0V2idSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A0V5titleSSvp",
+            "mangledName": "$s11MovieModels0A0V5titleSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A0V5titleSSvg",
+                "mangledName": "$s11MovieModels0A0V5titleSSvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "overview",
+            "printedName": "overview",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A0V8overviewSSvp",
+            "mangledName": "$s11MovieModels0A0V8overviewSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A0V8overviewSSvg",
+                "mangledName": "$s11MovieModels0A0V8overviewSSvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "posterPath",
+            "printedName": "posterPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A0V10posterPathSSSgvp",
+            "mangledName": "$s11MovieModels0A0V10posterPathSSSgvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A0V10posterPathSSSgvg",
+                "mangledName": "$s11MovieModels0A0V10posterPathSSSgvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "releaseDate",
+            "printedName": "releaseDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A0V11releaseDateSSvp",
+            "mangledName": "$s11MovieModels0A0V11releaseDateSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A0V11releaseDateSSvg",
+                "mangledName": "$s11MovieModels0A0V11releaseDateSSvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:title:overview:posterPath:releaseDate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Movie",
+                "printedName": "MovieModels.Movie",
+                "usr": "s:11MovieModels0A0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels0A0V2id5title8overview10posterPath11releaseDateACSi_S3SSgSStcfc",
+            "mangledName": "$s11MovieModels0A0V2id5title8overview10posterPath11releaseDateACSi_S3SSgSStcfc",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A0V5image10Foundation3URLVSgvp",
+            "mangledName": "$s11MovieModels0A0V5image10Foundation3URLVSgvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A0V5image10Foundation3URLVSgvg",
+                "mangledName": "$s11MovieModels0A0V5image10Foundation3URLVSgvg",
+                "moduleName": "MovieModels",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "releaseYear",
+            "printedName": "releaseYear",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A0V11releaseYearSSvp",
+            "mangledName": "$s11MovieModels0A0V11releaseYearSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A0V11releaseYearSSvg",
+                "mangledName": "$s11MovieModels0A0V11releaseYearSSvg",
+                "moduleName": "MovieModels",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Movie",
+                "printedName": "MovieModels.Movie",
+                "usr": "s:11MovieModels0A0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels0A0V4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11MovieModels0A0V4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels0A0V6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11MovieModels0A0V6encode2toys7Encoder_p_tKF",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Movie",
+                "printedName": "MovieModels.Movie",
+                "usr": "s:11MovieModels0A0V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Movie",
+                "printedName": "MovieModels.Movie",
+                "usr": "s:11MovieModels0A0V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels0A0V2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11MovieModels0A0V2eeoiySbAC_ACtFZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11MovieModels0A0V",
+        "mangledName": "$s11MovieModels0A0V",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Favoritable",
+            "printedName": "Favoritable",
+            "usr": "s:11MovieModels11FavoritableP",
+            "mangledName": "$s11MovieModels11FavoritableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MovieDetails",
+        "printedName": "MovieDetails",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV2idSivp",
+            "mangledName": "$s11MovieModels0A7DetailsV2idSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV2idSivg",
+                "mangledName": "$s11MovieModels0A7DetailsV2idSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "genres",
+            "printedName": "genres",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MovieModels.Genre]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Genre",
+                    "printedName": "MovieModels.Genre",
+                    "usr": "s:11MovieModels5GenreV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV6genresSayAA5GenreVGvp",
+            "mangledName": "$s11MovieModels0A7DetailsV6genresSayAA5GenreVGvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MovieModels.Genre]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Genre",
+                        "printedName": "MovieModels.Genre",
+                        "usr": "s:11MovieModels5GenreV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV6genresSayAA5GenreVGvg",
+                "mangledName": "$s11MovieModels0A7DetailsV6genresSayAA5GenreVGvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV5titleSSvp",
+            "mangledName": "$s11MovieModels0A7DetailsV5titleSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV5titleSSvg",
+                "mangledName": "$s11MovieModels0A7DetailsV5titleSSvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "overview",
+            "printedName": "overview",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV8overviewSSvp",
+            "mangledName": "$s11MovieModels0A7DetailsV8overviewSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV8overviewSSvg",
+                "mangledName": "$s11MovieModels0A7DetailsV8overviewSSvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "posterPath",
+            "printedName": "posterPath",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV10posterPathSSSgvp",
+            "mangledName": "$s11MovieModels0A7DetailsV10posterPathSSSgvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV10posterPathSSSgvg",
+                "mangledName": "$s11MovieModels0A7DetailsV10posterPathSSSgvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "releaseDate",
+            "printedName": "releaseDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV11releaseDateSSvp",
+            "mangledName": "$s11MovieModels0A7DetailsV11releaseDateSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV11releaseDateSSvg",
+                "mangledName": "$s11MovieModels0A7DetailsV11releaseDateSSvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "voteAverage",
+            "printedName": "voteAverage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV11voteAverageSdvp",
+            "mangledName": "$s11MovieModels0A7DetailsV11voteAverageSdvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV11voteAverageSdvg",
+                "mangledName": "$s11MovieModels0A7DetailsV11voteAverageSdvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "voteCount",
+            "printedName": "voteCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV9voteCountSivp",
+            "mangledName": "$s11MovieModels0A7DetailsV9voteCountSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV9voteCountSivg",
+                "mangledName": "$s11MovieModels0A7DetailsV9voteCountSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "runtime",
+            "printedName": "runtime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV7runtimeSivp",
+            "mangledName": "$s11MovieModels0A7DetailsV7runtimeSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV7runtimeSivg",
+                "mangledName": "$s11MovieModels0A7DetailsV7runtimeSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "image",
+            "printedName": "image",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV5image10Foundation3URLVSgvp",
+            "mangledName": "$s11MovieModels0A7DetailsV5image10Foundation3URLVSgvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV5image10Foundation3URLVSgvg",
+                "mangledName": "$s11MovieModels0A7DetailsV5image10Foundation3URLVSgvg",
+                "moduleName": "MovieModels",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "releaseYear",
+            "printedName": "releaseYear",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV11releaseYearSSvp",
+            "mangledName": "$s11MovieModels0A7DetailsV11releaseYearSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV11releaseYearSSvg",
+                "mangledName": "$s11MovieModels0A7DetailsV11releaseYearSSvg",
+                "moduleName": "MovieModels",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "formattedRuntime",
+            "printedName": "formattedRuntime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV16formattedRuntimeSSvp",
+            "mangledName": "$s11MovieModels0A7DetailsV16formattedRuntimeSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV16formattedRuntimeSSvg",
+                "mangledName": "$s11MovieModels0A7DetailsV16formattedRuntimeSSvg",
+                "moduleName": "MovieModels",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:genres:title:overview:posterPath:releaseDate:voteAverage:voteCount:runtime:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MovieDetails",
+                "printedName": "MovieModels.MovieDetails",
+                "usr": "s:11MovieModels0A7DetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MovieModels.Genre]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Genre",
+                    "printedName": "MovieModels.Genre",
+                    "usr": "s:11MovieModels5GenreV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels0A7DetailsV2id6genres5title8overview10posterPath11releaseDate11voteAverage0L5Count7runtimeACSi_SayAA5GenreVGS3SSgSSSdS2itcfc",
+            "mangledName": "$s11MovieModels0A7DetailsV2id6genres5title8overview10posterPath11releaseDate11voteAverage0L5Count7runtimeACSi_SayAA5GenreVGS3SSgSSSdS2itcfc",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MovieDetails",
+                "printedName": "MovieModels.MovieDetails",
+                "usr": "s:11MovieModels0A7DetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels0A7DetailsV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11MovieModels0A7DetailsV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels0A7DetailsV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11MovieModels0A7DetailsV6encode2toys7Encoder_p_tKF",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MovieDetails",
+                "printedName": "MovieModels.MovieDetails",
+                "usr": "s:11MovieModels0A7DetailsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MovieDetails",
+                "printedName": "MovieModels.MovieDetails",
+                "usr": "s:11MovieModels0A7DetailsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels0A7DetailsV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11MovieModels0A7DetailsV2eeoiySbAC_ACtFZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "asMovie",
+            "printedName": "asMovie",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Movie",
+                "printedName": "MovieModels.Movie",
+                "usr": "s:11MovieModels0A0V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels0A7DetailsV02asA0AA0A0Vvp",
+            "mangledName": "$s11MovieModels0A7DetailsV02asA0AA0A0Vvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Movie",
+                    "printedName": "MovieModels.Movie",
+                    "usr": "s:11MovieModels0A0V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels0A7DetailsV02asA0AA0A0Vvg",
+                "mangledName": "$s11MovieModels0A7DetailsV02asA0AA0A0Vvg",
+                "moduleName": "MovieModels",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11MovieModels0A7DetailsV",
+        "mangledName": "$s11MovieModels0A7DetailsV",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Favoritable",
+            "printedName": "Favoritable",
+            "usr": "s:11MovieModels11FavoritableP",
+            "mangledName": "$s11MovieModels11FavoritableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Genre",
+        "printedName": "Genre",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels5GenreV2idSivp",
+            "mangledName": "$s11MovieModels5GenreV2idSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels5GenreV2idSivg",
+                "mangledName": "$s11MovieModels5GenreV2idSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels5GenreV4nameSSvp",
+            "mangledName": "$s11MovieModels5GenreV4nameSSvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels5GenreV4nameSSvg",
+                "mangledName": "$s11MovieModels5GenreV4nameSSvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Genre",
+                "printedName": "MovieModels.Genre",
+                "usr": "s:11MovieModels5GenreV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels5GenreV2id4nameACSi_SStcfc",
+            "mangledName": "$s11MovieModels5GenreV2id4nameACSi_SStcfc",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Genre",
+                "printedName": "MovieModels.Genre",
+                "usr": "s:11MovieModels5GenreV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels5GenreV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11MovieModels5GenreV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels5GenreV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11MovieModels5GenreV6encode2toys7Encoder_p_tKF",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Genre",
+                "printedName": "MovieModels.Genre",
+                "usr": "s:11MovieModels5GenreV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Genre",
+                "printedName": "MovieModels.Genre",
+                "usr": "s:11MovieModels5GenreV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels5GenreV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11MovieModels5GenreV2eeoiySbAC_ACtFZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11MovieModels5GenreV",
+        "mangledName": "$s11MovieModels5GenreV",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SearchMoviesResponse",
+        "printedName": "SearchMoviesResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "page",
+            "printedName": "page",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels20SearchMoviesResponseV4pageSivp",
+            "mangledName": "$s11MovieModels20SearchMoviesResponseV4pageSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels20SearchMoviesResponseV4pageSivg",
+                "mangledName": "$s11MovieModels20SearchMoviesResponseV4pageSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "results",
+            "printedName": "results",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MovieModels.Movie]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Movie",
+                    "printedName": "MovieModels.Movie",
+                    "usr": "s:11MovieModels0A0V"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels20SearchMoviesResponseV7resultsSayAA0A0VGvp",
+            "mangledName": "$s11MovieModels20SearchMoviesResponseV7resultsSayAA0A0VGvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MovieModels.Movie]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Movie",
+                        "printedName": "MovieModels.Movie",
+                        "usr": "s:11MovieModels0A0V"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels20SearchMoviesResponseV7resultsSayAA0A0VGvg",
+                "mangledName": "$s11MovieModels20SearchMoviesResponseV7resultsSayAA0A0VGvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "totalPages",
+            "printedName": "totalPages",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels20SearchMoviesResponseV10totalPagesSivp",
+            "mangledName": "$s11MovieModels20SearchMoviesResponseV10totalPagesSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels20SearchMoviesResponseV10totalPagesSivg",
+                "mangledName": "$s11MovieModels20SearchMoviesResponseV10totalPagesSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "totalResults",
+            "printedName": "totalResults",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels20SearchMoviesResponseV12totalResultsSivp",
+            "mangledName": "$s11MovieModels20SearchMoviesResponseV12totalResultsSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels20SearchMoviesResponseV12totalResultsSivg",
+                "mangledName": "$s11MovieModels20SearchMoviesResponseV12totalResultsSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(page:results:totalPages:totalResults:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SearchMoviesResponse",
+                "printedName": "MovieModels.SearchMoviesResponse",
+                "usr": "s:11MovieModels20SearchMoviesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MovieModels.Movie]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Movie",
+                    "printedName": "MovieModels.Movie",
+                    "usr": "s:11MovieModels0A0V"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels20SearchMoviesResponseV4page7results10totalPages0H7ResultsACSi_SayAA0A0VGS2itcfc",
+            "mangledName": "$s11MovieModels20SearchMoviesResponseV4page7results10totalPages0H7ResultsACSi_SayAA0A0VGS2itcfc",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SearchMoviesResponse",
+                "printedName": "MovieModels.SearchMoviesResponse",
+                "usr": "s:11MovieModels20SearchMoviesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels20SearchMoviesResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11MovieModels20SearchMoviesResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels20SearchMoviesResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11MovieModels20SearchMoviesResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11MovieModels20SearchMoviesResponseV",
+        "mangledName": "$s11MovieModels20SearchMoviesResponseV",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TrendingMoviesResponse",
+        "printedName": "TrendingMoviesResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "page",
+            "printedName": "page",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels22TrendingMoviesResponseV4pageSivp",
+            "mangledName": "$s11MovieModels22TrendingMoviesResponseV4pageSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels22TrendingMoviesResponseV4pageSivg",
+                "mangledName": "$s11MovieModels22TrendingMoviesResponseV4pageSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "results",
+            "printedName": "results",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MovieModels.Movie]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Movie",
+                    "printedName": "MovieModels.Movie",
+                    "usr": "s:11MovieModels0A0V"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels22TrendingMoviesResponseV7resultsSayAA0A0VGvp",
+            "mangledName": "$s11MovieModels22TrendingMoviesResponseV7resultsSayAA0A0VGvp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[MovieModels.Movie]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Movie",
+                        "printedName": "MovieModels.Movie",
+                        "usr": "s:11MovieModels0A0V"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels22TrendingMoviesResponseV7resultsSayAA0A0VGvg",
+                "mangledName": "$s11MovieModels22TrendingMoviesResponseV7resultsSayAA0A0VGvg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "totalPages",
+            "printedName": "totalPages",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels22TrendingMoviesResponseV10totalPagesSivp",
+            "mangledName": "$s11MovieModels22TrendingMoviesResponseV10totalPagesSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels22TrendingMoviesResponseV10totalPagesSivg",
+                "mangledName": "$s11MovieModels22TrendingMoviesResponseV10totalPagesSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "totalResults",
+            "printedName": "totalResults",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MovieModels22TrendingMoviesResponseV12totalResultsSivp",
+            "mangledName": "$s11MovieModels22TrendingMoviesResponseV12totalResultsSivp",
+            "moduleName": "MovieModels",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MovieModels22TrendingMoviesResponseV12totalResultsSivg",
+                "mangledName": "$s11MovieModels22TrendingMoviesResponseV12totalResultsSivg",
+                "moduleName": "MovieModels",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(page:results:totalPages:totalResults:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrendingMoviesResponse",
+                "printedName": "MovieModels.TrendingMoviesResponse",
+                "usr": "s:11MovieModels22TrendingMoviesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[MovieModels.Movie]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Movie",
+                    "printedName": "MovieModels.Movie",
+                    "usr": "s:11MovieModels0A0V"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels22TrendingMoviesResponseV4page7results10totalPages0H7ResultsACSi_SayAA0A0VGS2itcfc",
+            "mangledName": "$s11MovieModels22TrendingMoviesResponseV4page7results10totalPages0H7ResultsACSi_SayAA0A0VGS2itcfc",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrendingMoviesResponse",
+                "printedName": "MovieModels.TrendingMoviesResponse",
+                "usr": "s:11MovieModels22TrendingMoviesResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MovieModels22TrendingMoviesResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s11MovieModels22TrendingMoviesResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MovieModels22TrendingMoviesResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s11MovieModels22TrendingMoviesResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "MovieModels",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11MovieModels22TrendingMoviesResponseV",
+        "mangledName": "$s11MovieModels22TrendingMoviesResponseV",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MovieModels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DateFormatter",
+        "printedName": "DateFormatter",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "yearString",
+            "printedName": "yearString(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So15NSDateFormatterC11MovieModelsE10yearString4fromSSSgSS_tFZ",
+            "mangledName": "$sSo15NSDateFormatterC11MovieModelsE10yearString4fromSSSgSS_tFZ",
+            "moduleName": "MovieModels",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSDateFormatter",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSDateFormatter",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSFormatter",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Foundation.Formatter",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/aleksandrachekichevska\/Desktop\/FINAL\/Movies\/MovieModels\/Sources\/MovieModels\/API\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 166,
+      "length": 241,
+      "value": "\"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDBjZGY0ZjE1ZWJlZTA3MjA1NTNmN2NkN2YyMmRhZiIsIm5iZiI6MTc0NjgxNjU1NC4xMjksInN1YiI6IjY4MWU0ZTJhMGY3MzM5MDQwNjljMmJiNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UaZpGO0iTbk5_pdg8DPm_hZac9ddPiMMpP1EpKrso9k\""
+    },
+    {
+      "filePath": "\/Users\/aleksandrachekichevska\/Desktop\/FINAL\/Movies\/MovieModels\/Sources\/MovieModels\/API\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 478,
+      "length": 21,
+      "value": "\"trending\/movie\/week\""
+    },
+    {
+      "filePath": "\/Users\/aleksandrachekichevska\/Desktop\/FINAL\/Movies\/MovieModels\/Sources\/MovieModels\/API\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 568,
+      "length": 8,
+      "value": "\"movie\/\""
+    },
+    {
+      "filePath": "\/Users\/aleksandrachekichevska\/Desktop\/FINAL\/Movies\/MovieModels\/Sources\/MovieModels\/API\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 645,
+      "length": 14,
+      "value": "\"search\/movie\""
+    },
+    {
+      "filePath": "\/Users\/aleksandrachekichevska\/Desktop\/FINAL\/Movies\/MovieModels\/Sources\/MovieModels\/API\/APIEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 691,
+      "length": 34,
+      "value": "\"https:\/\/image.tmdb.org\/t\/p\/w500\/\""
+    },
+    {
+      "filePath": "\/Users\/aleksandrachekichevska\/Desktop\/FINAL\/Movies\/MovieModels\/Sources\/MovieModels\/API\/APIService.swift",
+      "kind": "Array",
+      "offset": 790,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/aleksandrachekichevska\/Desktop\/FINAL\/Movies\/MovieModels\/Sources\/MovieModels\/Common\/FavoritesManager.swift",
+      "kind": "Array",
+      "offset": 356,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target x86_64-apple-tvos15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name MovieModels
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+import Combine
+import Foundation
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum APIEndpoints {
+}
+public enum NetworkingError : Swift.Error {
+  case invalidURL
+  case invalidResponse
+  case invalidData
+  case unknown
+  public static func == (a: MovieModels.NetworkingError, b: MovieModels.NetworkingError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol MovieServiceProtocol {
+  func fetchTrendingMovies(page: Swift.Int) async throws -> MovieModels.TrendingMoviesResponse
+  func getMovieDetails(movieId: Swift.Int) async throws -> MovieModels.MovieDetails
+  func searchMovies(query: Swift.String, page: Swift.Int) async throws -> MovieModels.SearchMoviesResponse
+}
+@_hasMissingDesignatedInitializers final public class APIService : MovieModels.MovieServiceProtocol, @unchecked Swift.Sendable {
+  public static let shared: MovieModels.APIService
+  final public func performRequest<T>(endpoint: Swift.String, pathComponent: Swift.String? = nil, queryItems: [Foundation.URLQueryItem] = []) async throws -> T where T : Swift.Decodable
+  final public func fetchTrendingMovies(page: Swift.Int) async throws -> MovieModels.TrendingMoviesResponse
+  final public func getMovieDetails(movieId: Swift.Int) async throws -> MovieModels.MovieDetails
+  final public func searchMovies(query: Swift.String, page: Swift.Int) async throws -> MovieModels.SearchMoviesResponse
+  @objc deinit
+}
+public protocol Favoritable : Swift.Decodable, Swift.Encodable, Swift.Equatable, Swift.Identifiable {
+  var id: Swift.Int { get }
+}
+final public class FavoritesManager<T> : Foundation.ObservableObject where T : MovieModels.Favoritable {
+  @Combine.Published @_projectedValueProperty($favorites) final public var favorites: [T] {
+    get
+  }
+  final public var $favorites: Combine.Published<[T]>.Publisher {
+    get
+  }
+  public init(key: Swift.String)
+  final public func toggleFavorite(_ item: T)
+  final public func contains(_ item: T) -> Swift.Bool
+  final public func getFavorites() -> [T]
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct Movie : Swift.Identifiable, Swift.Codable, MovieModels.Favoritable, Swift.Equatable {
+  public let id: Swift.Int
+  public let title: Swift.String
+  public let overview: Swift.String
+  public let posterPath: Swift.String?
+  public let releaseDate: Swift.String
+  public init(id: Swift.Int, title: Swift.String, overview: Swift.String, posterPath: Swift.String?, releaseDate: Swift.String)
+  public var image: Foundation.URL? {
+    get
+  }
+  public var releaseYear: Swift.String {
+    get
+  }
+  public static func == (a: MovieModels.Movie, b: MovieModels.Movie) -> Swift.Bool
+  public typealias ID = Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MovieDetails : Swift.Identifiable, Swift.Codable, MovieModels.Favoritable, Swift.Equatable {
+  public let id: Swift.Int
+  public let genres: [MovieModels.Genre]
+  public let title: Swift.String
+  public let overview: Swift.String
+  public let posterPath: Swift.String?
+  public let releaseDate: Swift.String
+  public let voteAverage: Swift.Double
+  public let voteCount: Swift.Int
+  public let runtime: Swift.Int
+  public var image: Foundation.URL? {
+    get
+  }
+  public var releaseYear: Swift.String {
+    get
+  }
+  public var formattedRuntime: Swift.String {
+    get
+  }
+  public init(id: Swift.Int, genres: [MovieModels.Genre], title: Swift.String, overview: Swift.String, posterPath: Swift.String?, releaseDate: Swift.String, voteAverage: Swift.Double, voteCount: Swift.Int, runtime: Swift.Int)
+  public static func == (a: MovieModels.MovieDetails, b: MovieModels.MovieDetails) -> Swift.Bool
+  public typealias ID = Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension MovieModels.MovieDetails {
+  public var asMovie: MovieModels.Movie {
+    get
+  }
+}
+public struct Genre : Swift.Identifiable, Swift.Codable, Swift.Equatable {
+  public let id: Swift.Int
+  public let name: Swift.String
+  public init(id: Swift.Int, name: Swift.String)
+  public static func == (a: MovieModels.Genre, b: MovieModels.Genre) -> Swift.Bool
+  public typealias ID = Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SearchMoviesResponse : Swift.Codable {
+  public let page: Swift.Int
+  public let results: [MovieModels.Movie]
+  public let totalPages: Swift.Int
+  public let totalResults: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TrendingMoviesResponse : Swift.Codable {
+  public let page: Swift.Int
+  public let results: [MovieModels.Movie]
+  public let totalPages: Swift.Int
+  public let totalResults: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension MovieModels.NetworkingError : Swift.Equatable {}
+extension MovieModels.NetworkingError : Swift.Hashable {}

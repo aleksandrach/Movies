@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MovieModels
 
 struct FavoritesView: View {
     @EnvironmentObject var favoritesManager: FavoritesManager<Movie>

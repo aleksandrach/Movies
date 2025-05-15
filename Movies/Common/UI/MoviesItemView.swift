@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Kingfisher
+import MovieModels
 
 struct MovieItemView: View {
     @EnvironmentObject var favoritesManager: FavoritesManager<Movie>

@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import MovieModels
 
 struct PersistenceController {
     static let shared = PersistenceController()

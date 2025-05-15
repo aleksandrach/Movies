@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import MovieModels
 
 struct MoviesListView: View {
     let movies: [Movie]
     let title: String
     let onItemAppear: ((Movie) -> Void)?
     let onAppear: (() -> Void)?
-    var showEmptyState: (() -> Bool)? = nil
+    var showEmptyState: (() -> Bool)?
     let accessibilityPrefix: String // e.g. "search" or "favorites"
     
     var body: some View {
