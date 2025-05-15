@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchMoviesView: View {
-    @StateObject private var viewModel = SearchViewModel()
+    @StateObject private var viewModel = SearchMoviesViewModel()
     
     var body: some View {
         MoviesListView(movies: viewModel.searchResults,

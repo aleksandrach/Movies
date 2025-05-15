@@ -1,5 +1,5 @@
 //
-//  SearchViewModel.swift
+//  SearchMoviesViewModel.swift
 //  Movies
 //
 //  Created by Aleksandra Axeltra on 12.5.25.
@@ -10,7 +10,7 @@ import Combine
 import SwiftUI
 
 @MainActor
-class SearchViewModel: ObservableObject {
+class SearchMoviesViewModel: ObservableObject {
     @Published var isSearching = false
     @Published var searchText: String = ""
     @Published var searchResults: [Movie] = []
