@@ -15,7 +15,10 @@ struct FavoritesView: View {
                        title: "Favorites",
                        onItemAppear: nil,
                        onAppear: nil,
-                       accessibilityPrefix: "favorites")
+                       showEmptyState: {
+            // Always show empty view if favorites list is empty
+            true
+        }, accessibilityPrefix: "favorites")
     }
 }
 
