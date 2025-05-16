@@ -21,11 +21,16 @@ This project is a showcase app that consumes **The Movie Database (TMDb)** API a
 - Title, overview, ratings, vote count, authors, etc.
 - Fully scrollable layout.
 
-### 3. Search Screen
-- Search for movies.
-- Includes throttled search behavior.
+### 3. Favorites Screen
+- Displays extended information for selected movies:
+- Title, overview, ratings, vote count, authors, etc.
 
-### 4. About Screen
+### 4. Search Screen
+- View and manage a list of favorite movies.
+- Mark movies as favorites.
+- Favorites are stored locally with visual indicators.
+
+### 5. About Screen
 - UIKit
 
 ---
