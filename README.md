@@ -18,12 +18,15 @@ This project is a showcase app that consumes **The Movie Database (TMDb)** API a
 
 ### 2. Details Screen
 - Displays extended information for selected movies:
-  - Title, overview, ratings, vote count, authors, etc.
+- Title, overview, ratings, vote count, authors, etc.
 - Fully scrollable layout.
 
 ### 3. Search Screen
 - Search for movies.
 - Includes throttled search behavior.
+
+### 4. About Screen
+- UIKit
 
 ---
 
