@@ -12,7 +12,12 @@ import MovieModels
 struct MoviesApp: App {
     let persistenceController = PersistenceController.shared
     
-    @StateObject private var movieFavoritesManager = FavoritesManager(context: PersistenceController.shared.container.viewContext)
+    @StateObject private var favoritesManager: FavoritesManager
+    
+    init() {
+        let context = persistenceController.container.viewContext
+        _favoritesManager = StateObject(wrappedValue: FavoritesManager(context: context))
+    }
     
     var body: some Scene {
         WindowGroup {
@@ -37,7 +42,7 @@ struct MoviesApp: App {
                         Label("About", systemImage: "info.circle")
                     }
             }
-            .environmentObject(movieFavoritesManager)
+            .environmentObject(favoritesManager)
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

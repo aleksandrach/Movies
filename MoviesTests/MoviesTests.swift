@@ -11,13 +11,13 @@ import SwiftUI
 import MovieModels
 
 final class MoviesTests: XCTestCase {
-    
     let service = APIService.shared
     
-    var favoritesManager: FavoritesManager<Movie>!
+    var favoritesManager: FavoritesManager!
 
+    @MainActor
     override func setUpWithError() throws {
-        favoritesManager = FavoritesManager<Movie>(key: "Test")
+        favoritesManager = FavoritesManager(context: PersistenceController.shared.container.viewContext)
     }
 
     override func tearDownWithError() throws {
@@ -111,9 +111,9 @@ final class MoviesTests: XCTestCase {
             releaseDate: "2025-01-01"
         )
         
-        favoritesManager.toggleFavorite(movie)
+        favoritesManager.toggleFavorite(movie: movie)
         
-        XCTAssertTrue(favoritesManager.contains(movie))
+        XCTAssertTrue(favoritesManager.isFavorite(movie: movie))
     }
     
     func testPerformanceExample() throws {

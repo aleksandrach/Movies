@@ -42,44 +42,12 @@ struct PersistenceController {
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
         container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-    }
-    
-    // Fetching movies from Core Data
-    func fetchMovies() -> [CDMovie]? {
-        let fetchRequest: NSFetchRequest<CDMovie> = CDMovie.fetchRequest()
-        let context = PersistenceController.shared.container.viewContext
-        do {
-            let movies = try context.fetch(fetchRequest)
-            return movies
-        } catch {
-            print("Error fetching movies: \(error)")
-            return nil
-        }
-    }
-
-    // Saving movies into Core Data
-    func saveMovies(movies: [Movie]) {
-        let context = PersistenceController.shared.container.viewContext
-        
-        for movie in movies {
-            let cdMovie = CDMovie(context: context)
-            cdMovie.id = Int64(movie.id)
-            cdMovie.title = movie.title
-            cdMovie.overview = movie.overview
-            cdMovie.posterPath = movie.posterPath ?? ""
-        }
-        
-        do {
-            try context.save()
-        } catch {
-            print("Error saving movie: \(error)")
-        }
     }
 }

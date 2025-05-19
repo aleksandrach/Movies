@@ -25,6 +25,6 @@ let package = Package(
         .testTarget(
             name: "MovieModelsTests",
             dependencies: ["MovieModels"]
-        ),
+        )
     ]
 )
