@@ -41,7 +41,6 @@ final class MoviesTests: XCTestCase {
                                         voteCount: 16,
                                         runtime: 126)
         
-        
         XCTAssertTrue(movieDetails.asMovie is Movie)
     }
     

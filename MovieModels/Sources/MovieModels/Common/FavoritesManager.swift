@@ -9,10 +9,6 @@ import Foundation
 import CoreData
 import Combine
 
-protocol Favoritable: Identifiable, Codable, Equatable {
-    var id: Int { get }
-}
-
 public final class FavoritesManager: ObservableObject {
     @Published public private(set) var favorites: [CDMovie] = []
 

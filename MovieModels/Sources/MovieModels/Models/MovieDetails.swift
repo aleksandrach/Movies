@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MovieDetails: Identifiable, Codable, Favoritable, Equatable {
+public struct MovieDetails: Identifiable, Codable, Equatable {
     public let id: Int
     public let genres: [Genre]
     public let title: String
