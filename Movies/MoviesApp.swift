@@ -12,7 +12,7 @@ import MovieModels
 struct MoviesApp: App {
     let persistenceController = PersistenceController.shared
     
-    @StateObject private var movieFavoritesManager = FavoritesManager<Movie>(key: "FavoriteMovies")
+    @StateObject private var movieFavoritesManager = FavoritesManager(context: PersistenceController.shared.container.viewContext)
     
     var body: some Scene {
         WindowGroup {

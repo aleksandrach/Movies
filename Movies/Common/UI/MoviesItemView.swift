@@ -10,7 +10,7 @@ import Kingfisher
 import MovieModels
 
 struct MovieItemView: View {
-    @EnvironmentObject var favoritesManager: FavoritesManager<Movie>
+    @EnvironmentObject var favoritesManager: FavoritesManager
     
     var movie: Movie
     
@@ -34,9 +34,9 @@ struct MovieItemView: View {
                     Spacer()
                     
                     Button {
-                        favoritesManager.toggleFavorite(movie)
+                        favoritesManager.toggleFavorite(movie: movie)
                     } label: {
-                        FavoriteImage(favorite: favoritesManager.contains(movie))
+                        FavoriteImage(favorite: favoritesManager.isFavorite(movie: movie))
                     }
                 }
                 

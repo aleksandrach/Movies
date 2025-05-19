@@ -44,8 +44,11 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Common/FavoritesManager.swift,
+				CoreData/CDMovie.swift,
+				CoreData/MovieRepository.swift,
 				Info.plist,
 				MovieDetails/Model/MovieDetails.swift,
+				Persistence.swift,
 				Search/Model/SearchMoviesResponse.swift,
 				Services/APIEndpoints.swift,
 				Services/APIService.swift,

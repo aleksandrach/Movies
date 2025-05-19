@@ -11,7 +11,7 @@ import MovieModels
 
 struct MovieDetailsView: View {
     @StateObject private var viewModel = MovieDetailsViewModel()
-    @EnvironmentObject var favoritesManager: FavoritesManager<Movie>
+    @EnvironmentObject var favoritesManager: FavoritesManager
     
     // It seems that here is some Apple bug, if you set the navTitle like this: .navigationTitle(viewModel.movieDetails?.title ?? " "), it will show "" on the screen - so added computed property
     var navigationTitle: String {
@@ -64,9 +64,9 @@ struct MovieDetailsView: View {
             .toolbar {
                 if let movieDetails = viewModel.movieDetails {
                     Button {
-                        favoritesManager.toggleFavorite(movieDetails.asMovie)
+                        favoritesManager.toggleFavorite(movie: movieDetails.asMovie)
                     } label: {
-                        FavoriteImage(favorite: favoritesManager.contains(movieDetails.asMovie))
+                        FavoriteImage(favorite: favoritesManager.isFavorite(movie: movieDetails.asMovie))
                     }
                     .accessibilityIdentifier("favorite_button")
                 }

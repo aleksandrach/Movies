@@ -9,10 +9,10 @@ import SwiftUI
 import MovieModels
 
 struct FavoritesView: View {
-    @EnvironmentObject var favoritesManager: FavoritesManager<Movie>
+    @EnvironmentObject var favoritesManager: FavoritesManager
     
     var body: some View {
-        MoviesListView(movies: favoritesManager.favorites,
+        MoviesListView(movies: favoritesManager.favoriteMovies,
                        title: "Favorites",
                        onItemAppear: nil,
                        onAppear: nil,
