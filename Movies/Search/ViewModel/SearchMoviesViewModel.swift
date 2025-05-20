@@ -10,12 +10,25 @@ import Combine
 import SwiftUI
 import MovieModels
 
+enum SearchMode: String, CaseIterable, Identifiable {
+    case movies = "Movies"
+    case tvShows = "TV Shows"
+    
+    var id: String { self.rawValue }
+}
+
 @MainActor
 class SearchMoviesViewModel: ObservableObject {
     @Published var isSearching = false
     @Published var searchText: String = ""
     @Published var searchResults: [Movie] = []
     @Published var errorMessage: String?
+    @Published var searchMode = SearchMode.movies {
+        didSet {
+            resetSearchResults()
+        }
+    }
+    
     
     private var currentPage = 1
     private var totalPages = 1
@@ -57,7 +70,14 @@ class SearchMoviesViewModel: ObservableObject {
         isFetching = true
         
         do {
-            let response = try await service.searchMovies(query: query, page: page)
+            let response: SearchMoviesResponse
+            
+            switch searchMode {
+            case .movies:
+                response = try await service.searchMovies(query: query, page: page)
+            case .tvShows:
+                response = try await service.searchTVShows(query: query, page: page)
+            }
             
             if page == 1 {
                 searchResults = response.results
@@ -89,5 +109,10 @@ class SearchMoviesViewModel: ObservableObject {
         }
         
         await searchMovies(query: searchText, page: currentPage + 1)
+    }
+    
+    func resetSearchResults() {
+        isFetching = false
+        searchText = ""
     }
 }

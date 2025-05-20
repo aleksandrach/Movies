@@ -16,5 +16,7 @@ public enum APIEndpoints {
     
     static let searchMovies = AppEnvironment.current.baseURL + "search/movie"
     
+    static let searchTVShows = AppEnvironment.current.baseURL + "search/tv"
+    
     static let imageURL = "https://image.tmdb.org/t/p/w500/"
 }

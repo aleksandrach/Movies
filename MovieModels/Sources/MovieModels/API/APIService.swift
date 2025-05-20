@@ -96,4 +96,14 @@ public final class APIService: MovieServiceProtocol, @unchecked Sendable {
                                  ]
         )
     }
+    
+    public func searchTVShows(query: String, page: Int) async throws -> SearchMoviesResponse {
+        try await performRequest(endpoint: APIEndpoints.searchTVShows,
+                                 queryItems: [
+                                    URLQueryItem(name: "language", value: "en-US"),
+                                    URLQueryItem(name: "page", value: "\(page)"),
+                                    URLQueryItem(name: "query", value: "\(query)")
+                                 ]
+        )
+    }
 }
